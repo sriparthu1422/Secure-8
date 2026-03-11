@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Primary Dark Theme Colors */
+  --color-cyber-950: #0B0F14;
+  /* Deepest background */
+  --color-cyber-900: #121A22;
+  /* Main dark background */
+  --color-cyber-800: #0F1720;
+  /* Card background */
+  --color-cyber-700: #1d2a3a;
+  /* Borders / subtle bg */
+
+  /* Accent Colors (Mapped to Secure8 Brand) */
+  --color-accent-blue: #22A652;
+  /* Primary Brand Color (Cyber Green) */
+  --color-accent-cyan: #39FF88;
+  /* Accent Color (Neon Green) */
+  --color-accent-purple: #0E6B3A;
+  /* Secondary Brand Color (Dark Security Green) */
+
+  /* Gradients */
+  --color-gradient-start: #22A652;
+  --color-gradient-end: #0E6B3A;
+}
+
+@layer base {
+  body {
+    @apply text-slate-300 bg-cyber-950 antialiased selection:bg-accent-blue/30 selection:text-white;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(57, 255, 136, 0.5);
+  }
+
+  .box-glow {
+    box-shadow: 0 0 25px -5px rgba(57, 255, 136, 0.25);
+  }
+
+  .box-glow-hover:hover {
+    box-shadow: 0 0 35px -5px rgba(57, 255, 136, 0.4);
+  }
+
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan;
+  }
+
+  .bg-gradient-cyber {
+    @apply bg-gradient-to-br from-cyber-900 via-cyber-950 to-cyber-900;
+  }
+}
