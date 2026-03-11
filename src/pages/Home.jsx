@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
-import Stats from '../components/Stats';
+// import Stats from '../components/Stats';
 import CTA from '../components/CTA';
 import TestimonialSlider from '../components/TestimonialSlider';
 import { FeatureCard, ServiceCard, CaseStudyCard, BlogCard } from '../components/Cards';
@@ -54,8 +54,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <Stats />
+            {/* <Stats /> */}
 
             {/* Services Grid Section */}
             <section className="py-24 bg-cyber-900 relative">

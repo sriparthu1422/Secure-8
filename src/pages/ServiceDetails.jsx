@@ -75,14 +75,14 @@ const ServiceDetails = () => {
 
                         {/* Right Column (Sidebar / CTA) */}
                         <div className="lg:w-1/3 space-y-8">
-                            <div className="bg-gradient-cyber p-8 rounded-3xl border border-cyber-700 relative overflow-hidden box-glow">
+                            {/* <div className="bg-gradient-cyber p-8 rounded-3xl border border-cyber-700 relative overflow-hidden box-glow">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent-blue/10 blur-[40px] rounded-full"></div>
                                 <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Start Your Free Trial Lab</h3>
                                 <p className="text-slate-400 mb-8 relative z-10">Our instructors will guide you through your first interactive security lab and outline your career map.</p>
                                 <button className="w-full bg-accent-blue hover:bg-[#0E6B3A] text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center relative z-10">
                                     Start Trial Now <FiArrowRight className="ml-2" />
                                 </button>
-                            </div>
+                            </div> */}
 
                             <div className="bg-cyber-800 p-8 rounded-3xl border border-cyber-700">
                                 <h3 className="text-xl font-bold text-white mb-6">Related Courses</h3>

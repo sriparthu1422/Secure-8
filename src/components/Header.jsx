@@ -10,9 +10,9 @@ const Header = () => {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Courses', path: '/services' },
-        { name: 'Success Stories', path: '/case-studies' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Pricing', path: '/pricing' },
+        // { name: 'Success Stories', path: '/case-studies' },
+        // { name: 'Blog', path: '/blog' },
+        // { name: 'Pricing', path: '/pricing' },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -46,9 +46,9 @@ const Header = () => {
 
                 {/* Desktop Buttons */}
                 <div className="hidden lg:flex space-x-4 items-center">
-                    <Link to="/contact" className="text-slate-300 hover:text-white font-medium transition-colors">
+                    {/* <Link to="/contact" className="text-slate-300 hover:text-white font-medium transition-colors">
                         Free Trial
-                    </Link>
+                    </Link> */}
                     <Link to="/contact" className="bg-accent-blue hover:bg-[#0E6B3A] text-white px-6 py-2.5 rounded-md font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(57, 255, 136,0.5)] hover:shadow-[0_0_25px_rgba(57, 255, 136,0.7)]">
                         Enroll Now
                     </Link>
@@ -77,9 +77,9 @@ const Header = () => {
                         </NavLink>
                     ))}
                     <div className="h-px bg-cyber-700 my-2"></div>
-                    <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-2 text-slate-300 hover:text-white font-medium">
+                    {/* <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-2 text-slate-300 hover:text-white font-medium">
                         Free Trial
-                    </Link>
+                    </Link> */}
                     <Link to="/contact" onClick={() => setIsOpen(false)} className="block bg-accent-blue text-center text-white px-6 py-3 rounded-md font-semibold mt-2">
                         Enroll Now
                     </Link>

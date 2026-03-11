@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
-import Stats from '../components/Stats';
+// import Stats from '../components/Stats';
 import { FiCheckCircle, FiShield, FiUsers, FiAward } from 'react-icons/fi';
 
 const TeamMember = ({ name, role, image }) => (
@@ -77,8 +77,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-
-            <Stats />
+            {/* <Stats /> */}
 
             {/* Leadership Team */}
             <section className="py-24 bg-cyber-950">
