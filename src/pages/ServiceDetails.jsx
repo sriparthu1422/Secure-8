@@ -15,7 +15,7 @@ const ServiceDetails = () => {
                     <div className="max-w-3xl">
                         <div className="flex items-center space-x-3 mb-6">
                             <FiShield className="w-8 h-8 text-accent-cyan" />
-                            <span className="text-accent-cyan font-bold tracking-widest uppercase text-sm">Featured Course</span>
+                            <span className="text-accent-cyan font-bold tracking-widest uppercase text-sm">Featured Academy</span>
                         </div>
                         <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                             Ethical Hacking <span className="text-gradient">Bootcamp</span>
@@ -24,7 +24,7 @@ const ServiceDetails = () => {
                             Master offensive security with a comprehensive curriculum covering penetration testing, network defense, and vulnerability exploitation to launch your cyber career.
                         </p>
                         <button className="bg-accent-blue hover:bg-[#0E6B3A] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(57, 255, 136,0.4)]">
-                            Enroll in Course
+                            Enroll in Academy
                         </button>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const ServiceDetails = () => {
                                     Modern cybersecurity requires a diverse skill set. The traditional concept of perimeter defense has evolved with the advent of remote work, cloud infrastructure, and sophisticated threat actors. To defend today's networks, you need practical, hands-on offensive and defensive understanding.
                                 </p>
                                 <p>
-                                    Our Ethical Hacking course immerses you in real-world scenarios through hands-on labs. We don't just teach theory; we guide you in exploiting and securing real environments using industry-standard tools and practices.
+                                    Our Ethical Hacking academy immerses you in real-world scenarios through hands-on labs. We don't just teach theory; we guide you in exploiting and securing real environments using industry-standard tools and practices.
                                 </p>
 
                                 <h3 className="text-2xl font-bold mt-12 mb-6">Overview of Features</h3>
@@ -85,7 +85,7 @@ const ServiceDetails = () => {
                             </div> */}
 
                             <div className="bg-cyber-800 p-8 rounded-3xl border border-cyber-700">
-                                <h3 className="text-xl font-bold text-white mb-6">Related Courses</h3>
+                                <h3 className="text-xl font-bold text-white mb-6">Related Academies</h3>
                                 <ul className="space-y-4">
                                     <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors"><FiArrowRight className="mr-3 text-accent-cyan" /> Cloud Security Architecture</a></li>
                                     <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors"><FiArrowRight className="mr-3 text-accent-cyan" /> Incident Response Masterclass</a></li>

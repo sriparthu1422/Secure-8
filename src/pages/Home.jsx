@@ -61,7 +61,7 @@ const Home = () => {
                 <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 -ml-40"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <SectionTitle
-                        title="Comprehensive Cybersecurity Courses"
+                        title="Comprehensive Cybersecurity Academies"
                         subtitle="What We Offer"
                         center
                     />

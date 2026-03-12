@@ -11,12 +11,12 @@ const Services = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <SectionTitle
-                        title="Premium Cybersecurity Courses"
+                        title="Premium Cybersecurity Academies"
                         subtitle="Our Programs"
                         center
                     />
                     <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-12">
-                        Explore our comprehensive suite of cybersecurity courses designed to empower you with industry-leading skills in ethical hacking, cloud security, penetration testing, and threat intelligence.
+                        Explore our comprehensive suite of cybersecurity academies designed to empower you with industry-leading skills in ethical hacking, cloud security, penetration testing, and threat intelligence.
                     </p>
                 </div>
             </section>

@@ -34,7 +34,7 @@ const Contact = () => {
                             Contact <span className="text-gradient">Secure8 Technology Services</span>
                         </h1>
                         <p className="text-xl text-slate-400">
-                            Reach out for course information, enrollment support, or cybersecurity consulting.
+                            Reach out for academy information, enrollment support, or cybersecurity consulting.
                         </p>
                     </div>
 

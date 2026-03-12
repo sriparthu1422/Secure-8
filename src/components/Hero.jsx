@@ -50,7 +50,7 @@ const Hero = () => {
                             <FiArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link to="/services" className="w-full sm:w-auto bg-transparent border border-cyber-700 hover:border-accent-blue px-8 py-4 rounded-lg font-bold text-lg text-white hover:bg-cyber-800/50 transition-all flex items-center justify-center">
-                            Explore Courses
+                            Explore Academies
                         </Link>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ import ServiceDetails from '../pages/ServiceDetails';
 // import BlogDetails from '../pages/BlogDetails';
 // import Pricing from '../pages/Pricing';
 import Contact from '../pages/Contact';
+import ServicesPage from '../pages/ServicesPage';
 
 const AppRouter = () => {
     return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
+                <Route path="our-services" element={<ServicesPage />} />
                 <Route path="services" element={<Services />} />
                 <Route path="services/:id" element={<ServiceDetails />} />
                 {/* <Route path="case-studies" element={<CaseStudies />} /> */}

@@ -37,9 +37,16 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Company</h4>
                         <ul className="space-y-4">
-                            {['About', 'Courses', 'Contact'].map((link) => (
+                            {['About', 'Services', 'Academies', 'Contact'].map((link) => (
                                 <li key={link}>
-                                    <Link to={link === 'Courses' ? '/services' : `/${link.toLowerCase().replace(' ', '-')}`} className="hover:text-accent-blue transition-colors text-sm">
+                                    <Link 
+                                        to={
+                                            link === 'Academies' ? '/services' : 
+                                            link === 'Services' ? '/our-services' :
+                                            `/${link.toLowerCase().replace(' ', '-')}`
+                                        } 
+                                        className="hover:text-accent-blue transition-colors text-sm"
+                                    >
                                         {link}
                                     </Link>
                                 </li>
@@ -47,9 +54,9 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Courses Links */}
+                    {/* Academies Links */}
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6">Courses</h4>
+                        <h4 className="text-white font-bold text-lg mb-6">Academies</h4>
                         <ul className="space-y-4">
                             {['Web Development', 'Cloud Architecture', 'Data Science & AI', 'UI/UX Design', 'DevOps Engineering'].map((link) => (
                                 <li key={link}>
