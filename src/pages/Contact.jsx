@@ -98,13 +98,21 @@ const Contact = () => {
                                 content={"#110, The Lotus, BNR Hills\nRoad #51, Jubilee Hills\nHyderabad, Telangana"}
                             />
 
-                            {/* Map Mock */}
-                            <div className="flex-grow w-full bg-cyber-800 rounded-2xl border border-cyber-700 overflow-hidden relative min-h-[250px] mt-6">
-                                <div className="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=San+Francisco,CA&zoom=13&size=600x300&maptype=roadmap&style=feature:all|element:labels.text.fill|color:0x8ec3b9&style=feature:all|element:labels.text.stroke|color:0x1a3646&style=feature:administrative.country|element:geometry.stroke|color:0x4b6878&style=feature:administrative.land_parcel|element:labels.text.fill|color:0x64779e&style=feature:administrative.province|element:geometry.stroke|color:0x4b6878&style=feature:landscape.man_made|element:geometry.stroke|color:0x334e87&style=feature:landscape.natural|element:geometry|color:0x023e58&style=feature:poi|element:geometry|color:0x283d6a&style=feature:poi|element:labels.text.fill|color:0x6f9ba5&style=feature:poi|element:labels.text.stroke|color:0x1d2c4d&style=feature:poi.park|element:geometry.fill|color:0x023e58&style=feature:road|element:geometry|color:0x304a7d&style=feature:road|element:labels.text.fill|color:0x98a5be&style=feature:road|element:labels.text.stroke|color:0x1d2c4d&style=feature:road.highway|element:geometry|color:0x2c6675&style=feature:road.highway|element:geometry.stroke|color:0x255763&style=feature:road.highway|element:labels.text.fill|color:0xb0d5ce&style=feature:road.highway|element:labels.text.stroke|color:0x023e58&style=feature:water|element:geometry|color:0x0e1626&style=feature:water|element:labels.text.fill|color:0x4e6d70')] bg-cover bg-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500"></div>
-                                <div className="absolute inset-0 bg-accent-blue/20 mix-blend-overlay pointer-events-none"></div>
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <div className="w-4 h-4 bg-accent-blue rounded-full shadow-[0_0_15px_rgba(57, 255, 136,1)] animate-ping"></div>
-                                </div>
+                            {/* Map */}
+                            <div className="flex-grow w-full bg-cyber-800 rounded-2xl border border-cyber-700 overflow-hidden relative min-h-[250px] mt-6 group">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15225.869062330752!2d78.39659074095759!3d17.43732644265431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb911a37a7b82f%3A0xe5cd6b9f291e0aed!2sC9FV%2BFX%2C%20Hyderabad%2C%20Telangana%20500033!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style={{ border: 0, minHeight: '250px' }} 
+                                    allowFullScreen="" 
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Academy Location Map"
+                                    className="grayscale group-hover:grayscale-0 transition-all duration-500 relative z-10 opacity-70 group-hover:opacity-100"
+                                ></iframe>
+                                {/* Overlay styling matching theme when not hovered */}
+                                <div className="absolute inset-0 bg-accent-blue/10 mix-blend-overlay pointer-events-none z-20 transition-opacity duration-500 group-hover:opacity-0"></div>
                             </div>
                         </div>
 
