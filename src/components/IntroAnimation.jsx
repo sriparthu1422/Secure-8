@@ -18,7 +18,7 @@ const IntroAnimation = ({ onComplete }) => {
         // Tell parent we are completely done after fade transition (4s total)
         const completeTimer = setTimeout(() => {
             onComplete();
-        }, 2200);
+        }, 2500);
 
         return () => {
             clearTimeout(welcomeTimer);
@@ -41,8 +41,15 @@ const IntroAnimation = ({ onComplete }) => {
             {/* Welcome Reveal Screen */}
             {showWelcome && (
                 <div className="z-10 flex flex-col items-center animate-fade-in text-center px-4">
+                    {/* Typing Text Reveal */}
+                    <div className="overflow-hidden border-r-4 border-accent-cyan whitespace-nowrap animate-typewriter pr-2 mb-8">
+                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-widest uppercase text-glow">
+                            Welcome to
+                        </h1>
+                    </div>
+
                     {/* Glowing Logo */}
-                    <div className="relative mb-8 group">
+                    <div className="relative group opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
                         <div className="absolute -inset-4 bg-accent-cyan/20 rounded-full blur-[40px] animate-pulse"></div>
                         <img
                             src={logo}
@@ -50,16 +57,6 @@ const IntroAnimation = ({ onComplete }) => {
                             className="h-20 md:h-28 lg:h-32 w-auto object-contain relative z-10 invert hue-rotate-180 brightness-110 contrast-125 mix-blend-screen animate-glitch drop-shadow-[0_0_15px_rgba(57,255,136,0.8)]"
                         />
                     </div>
-
-                    {/* Typing Text Reveal */}
-                    <div className="overflow-hidden border-r-4 border-accent-cyan whitespace-nowrap animate-typewriter pr-2">
-                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-widest uppercase text-glow">
-                            Welcome to <span className="text-gradient drop-shadow-[0_0_15px_rgba(57,255,136,0.5)]">Secure8</span>
-                        </h1>
-                    </div>
-                    <p className="mt-4 text-accent-cyan/80 font-mono text-sm md:text-base uppercase tracking-[0.3em] animate-fade-in" style={{ animationDelay: '1s' }}>
-                        Technology Services // Academy
-                    </p>
                 </div>
             )}
 
