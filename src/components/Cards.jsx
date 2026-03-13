@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
 export const ServiceCard = ({ icon: Icon, title, description, link }) => (
-    <div className="group p-8 rounded-2xl bg-cyber-800 border border-cyber-700 hover:border-accent-blue transition-all duration-300 hover:shadow-[0_0_30px_rgba(57, 255, 136,0.15)] flex flex-col h-full hover:-translate-y-2 relative overflow-hidden">
+    <Link to={link || "/services/details"} className="group p-8 rounded-2xl bg-cyber-800 border border-cyber-700 hover:border-accent-blue transition-all duration-300 hover:shadow-[0_0_30px_rgba(57, 255, 136,0.15)] flex flex-col h-full hover:-translate-y-2 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent-blue">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-blue to-accent-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
         <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-cyber-900 border border-cyber-700 text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300">
             <Icon className="w-7 h-7" />
         </div>
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">{title}</h3>
         <p className="text-slate-400 mb-6 leading-relaxed flex-grow">{description}</p>
-        <Link to={link || "/services/details"} className="inline-flex items-center text-accent-cyan font-semibold group-hover:text-white transition-colors mt-auto w-max">
+        <span className="inline-flex items-center text-accent-cyan font-semibold group-hover:text-white transition-colors mt-auto w-max">
             Learn More
             <FiArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-        </Link>
-    </div>
+        </span>
+    </Link>
 );
 
 export const FeatureCard = ({ icon: Icon, title, description }) => (
