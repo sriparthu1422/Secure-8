@@ -52,4 +52,60 @@
   .bg-gradient-cyber {
     @apply bg-gradient-to-br from-cyber-900 via-cyber-950 to-cyber-900;
   }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+  .animate-scanline {
+    animation: scanline 4s linear infinite;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+  }
+  .animate-glitch {
+    animation: glitch 0.3s ease-in-out 3; /* runs 3 times */
+  }
+
+  @keyframes typewriter {
+    from { max-width: 0; }
+    to { max-width: 100%; }
+  }
+  .animate-typewriter {
+    animation: typewriter 1s steps(40, end) forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-fast {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      clip-path: inset(0 0 0% 0);
+    }
+  }
+  .animate-slide-down {
+    animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
 }
