@@ -5,7 +5,8 @@ import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import TestimonialSlider from '../components/TestimonialSlider';
 import { FeatureCard, ServiceCard, CaseStudyCard, BlogCard } from '../components/Cards';
-import { FiTarget, FiLock, FiAlertTriangle, FiWifi, FiCloud, FiDatabase, FiUserCheck, FiActivity, FiServer, FiShield, FiUser, FiCheckCircle, FiBook, FiMonitor, FiAward } from 'react-icons/fi';
+import { FaBug, FaFingerprint } from 'react-icons/fa';
+import { FiTarget, FiLock, FiAlertTriangle, FiWifi, FiCloud, FiDatabase, FiUserCheck, FiActivity, FiServer, FiShield, FiUser, FiCheckCircle, FiBook, FiMonitor, FiAward, FiHash, FiCode, FiSmartphone } from 'react-icons/fi';
 
 const Home = () => {
     return (
@@ -48,7 +49,7 @@ const Home = () => {
                         />
                         <FeatureCard
                             icon={FiActivity}
-                            title="Security Career Placement"
+                            title="Security Career Assessment"
                             description="Dedicated career support designed to help students secure cybersecurity roles."
                         />
                     </div>
@@ -66,12 +67,13 @@ const Home = () => {
                         center
                     />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                        <ServiceCard icon={FiWifi} title="Ethical Hacking Bootcamp" description="Learn penetration testing, vulnerability assessment, and exploitation techniques based on OWASP Top 10." link="/services/network" />
-                        <ServiceCard icon={FiCloud} title="Cloud Security Architecture" description="Secure cloud infrastructure across AWS, Azure, and Google Cloud environments." link="/services/cloud" />
-                        <ServiceCard icon={FiDatabase} title="Threat Intelligence & Analysis" description="Identify and analyze cyber threats to protect modern digital systems." link="/services/encryption" />
-                        <ServiceCard icon={FiShield} title="Cyber Defense Bootcamp" description="Beginner-friendly training focused on SOC operations and cyber defense fundamentals." link="/services/identity" />
-                        <ServiceCard icon={FiUser} title="Incident Response Masterclass" description="Learn breach investigation, digital forensics, and real-world incident response." link="/services/monitoring" />
-                        <ServiceCard icon={FiServer} title="DevSecOps Engineering" description="Integrate security into modern development pipelines and cloud infrastructure." link="/services/backup" />
+                        <ServiceCard icon={FiHash} title="Information Security" description="We protect your digital assets through strategic infosec programs, risk assessments, and compliance-driven security controls." link="/services/network" />
+                        <ServiceCard icon={FaBug} title="Penetration Testing" description={<><strong className="block mb-2 text-slate-300">Find weaknesses before hackers do</strong>We simulate real-world cyberattacks on your web and mobile applications to uncover vulnerabilities—so you can fix them before they're exploited.</>} link="/services/cloud" />
+                        <ServiceCard icon={FiCode} title="API Security Testing" description={<><strong className="block mb-2 text-slate-300">Secure the connections that power your app</strong>Your APIs are the backbone of your product. We test them for hidden flaws like IDOR, broken authentication, and injection risks to protect your data.</>} link="/services/encryption" />
+                        <ServiceCard icon={FiCloud} title="Cloud Security" description={<><strong className="block mb-2 text-slate-300">Protect your AWS, Azure, or GCP environments</strong>We identify misconfigurations, access issues, and other cloud-specific risks to ensure your infrastructure stays secure and compliant.</>} link="/services/identity" />
+                        <ServiceCard icon={FaFingerprint} title="Identity & Access Management (IAM)" description={<><strong className="block mb-2 text-slate-300">Control who has access to what</strong>We help design and secure IAM systems so only the right people access the right resources—reducing insider risk and boosting compliance.</>} link="/services/monitoring" />
+                        <ServiceCard icon={FiBook} title="Security Awareness & Managed Services" description={<><strong className="block mb-2 text-slate-300">Build a security-first culture</strong>From team training to 24/7 managed security support, we help you strengthen internal defenses and meet industry standards like ISO 27001 and GDPR.</>} link="/services/backup" />
+                        <ServiceCard icon={FiSmartphone} title="Mobile Application Security" description={<><strong className="block mb-2 text-slate-300">Protect your Android and iOS apps from cyber threats</strong>We uncover vulnerabilities, insecure data handling, and broken authentication flows to ensure your mobile applications remain secure and trusted by users.</>} link="/services/mobile" />
                     </div>
                 </div>
             </section>
@@ -125,7 +127,7 @@ const Home = () => {
             </section>
 
             {/* Case Studies Preview */}
-            <section className="py-24 bg-cyber-900">
+            {/* <section className="py-24 bg-cyber-900">
                 <div className="container mx-auto px-4">
                     <SectionTitle
                         title="Real-World Student Success Stories"
@@ -152,7 +154,7 @@ const Home = () => {
                         />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <TestimonialSlider />
             <CTA />
