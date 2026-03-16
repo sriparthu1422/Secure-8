@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { FiStar } from 'react-icons/fi';
 import { FaQuoteLeft } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
@@ -8,7 +8,7 @@ import SectionTitle from './SectionTitle';
 // Import swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 
 const TestimonialSlider = () => {
     const testimonials = [
@@ -42,18 +42,21 @@ const TestimonialSlider = () => {
 
                 <div className="max-w-4xl mx-auto mt-12">
                     <Swiper
-                        modules={[Pagination, Autoplay, EffectFade]}
+                        modules={[Pagination, Autoplay, Navigation]}
                         spaceBetween={30}
                         slidesPerView={1}
-                        effect="fade"
-                        autoplay={{ delay: 6000, disableOnInteraction: false }}
-                        pagination={{ clickable: true, bulletActiveClass: 'swiper-pagination-bullet-active bg-accent-blue' }}
-                        className="pb-16 testimonial-swiper"
+                        loop={true}
+                        grabCursor={true}
+                        autoHeight={true}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        pagination={{ clickable: true }}
+                        navigation={true}
+                        className="pb-16 testimonial-swiper !px-4 md:!px-12"
                     >
                         {testimonials.map((test, index) => (
                             <SwiperSlide key={index}>
-                                <div className="bg-cyber-800 border border-cyber-700 p-6 md:p-10 lg:p-14 rounded-3xl relative">
-                                    <FaQuoteLeft className="absolute top-8 left-8 w-12 h-12 text-cyber-700/50" />
+                                <div className="bg-cyber-800 border border-cyber-700 p-8 md:p-12 lg:p-16 rounded-3xl relative h-full flex flex-col items-center">
+                                    <FaQuoteLeft className="absolute top-6 left-6 md:top-8 md:left-8 w-8 h-8 md:w-12 md:h-12 text-cyber-700/50" />
 
                                     <div className="flex text-yellow-500 mb-6 justify-center">
                                         {[...Array(5)].map((_, i) => (
@@ -61,7 +64,7 @@ const TestimonialSlider = () => {
                                         ))}
                                     </div>
 
-                                    <p className="text-xl md:text-2xl text-slate-300 italic mb-10 text-center leading-relaxed relative z-10 font-light">
+                                    <p className="text-lg md:text-xl lg:text-2xl text-slate-300 italic mb-8 text-center leading-relaxed relative z-10 font-light max-w-2xl">
                                         "{test.quote}"
                                     </p>
 

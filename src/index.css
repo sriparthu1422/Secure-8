@@ -108,4 +108,28 @@
   .animate-slide-down {
     animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
+
+  /* Custom Swiper Styles */
+  .testimonial-swiper .swiper-pagination-bullet {
+    @apply bg-slate-600 opacity-50 transition-all duration-300;
+  }
+
+  .testimonial-swiper .swiper-pagination-bullet-active {
+    @apply bg-accent-blue opacity-100 w-8 rounded-full;
+  }
+
+  .testimonial-swiper .swiper-button-next,
+  .testimonial-swiper .swiper-button-prev {
+    @apply text-accent-blue scale-75 md:scale-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+
+  .testimonial-swiper .swiper-button-next::after,
+  .testimonial-swiper .swiper-button-prev::after {
+    @apply text-2xl font-bold;
+  }
+
+  .testimonial-swiper:hover .swiper-button-next,
+  .testimonial-swiper:hover .swiper-button-prev {
+    @apply opacity-50 hover:opacity-100;
+  }
 }
