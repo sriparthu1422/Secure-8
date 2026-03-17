@@ -82,7 +82,7 @@ const Header = () => {
                         Free Trial
                     </Link> */}
                     <Link to="/contact" onClick={() => setIsOpen(false)} className="block bg-accent-blue text-center text-white px-6 py-3 rounded-md font-semibold mt-2">
-                        Enroll Now
+                        Get Started
                     </Link>
                 </div>
             )}

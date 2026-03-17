@@ -22,7 +22,7 @@ const CTA = () => {
                     </div>
                     <div className="flex-shrink-0">
                         <Link to="/contact" className="inline-flex items-center justify-center bg-accent-blue hover:bg-[#0E6B3A] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(57, 255, 136,0.4)] hover:shadow-[0_0_30px_rgba(57, 255, 136,0.6)] group">
-                            Enroll Now
+                            Get Started
                             <FiArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>

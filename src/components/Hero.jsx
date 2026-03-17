@@ -46,7 +46,7 @@ const Hero = () => {
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-6">
                         <Link to="/contact" className="w-full sm:w-auto bg-accent-blue hover:bg-[#0E6B3A] px-8 py-4 rounded-lg font-bold text-lg text-white transition-all shadow-[0_0_15px_rgba(57,255,136,0.15)] hover:shadow-[0_0_25px_rgba(57,255,136,0.3)] flex items-center justify-center group">
-                            Enroll Now
+                            Get Started
                             <FiArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link to="/services" className="w-full sm:w-auto bg-transparent border border-cyber-700 hover:border-accent-blue px-8 py-4 rounded-lg font-bold text-lg text-white hover:bg-cyber-800/50 transition-all flex items-center justify-center">
