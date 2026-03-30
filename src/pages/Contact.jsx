@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
 
 const ContactInfoCard = ({ icon: Icon, title, content, link, content2, link2 }) => (
@@ -25,12 +26,12 @@ const ContactInfoCard = ({ icon: Icon, title, content, link, content2, link2 }) 
 const Contact = () => {
     return (
         <div>
-            <section className="pt-32 pb-24 bg-cyber-950 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-accent-blue/10 to-transparent z-0"></div>
+            <section className="py-16 md:py-12 sm:py-16 lg:py-20 lg:py-32 bg-cyber-950 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full min-h-[500px] w-full bg-gradient-to-b from-accent-blue/10 to-transparent z-0"></div>
 
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center max-w-3xl mx-auto mb-20">
-                        <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+                <LayoutContainer className="relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6">
                             Contact <span className="text-gradient">Secure8 Technology Services</span>
                         </h1>
                         <p className="text-xl text-slate-400">
@@ -38,11 +39,11 @@ const Contact = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row gap-12 max-w-7xl mx-auto">
+                    <div className="flex flex-col lg:flex-row gap-12 w-full mx-auto">
 
                         {/* Contact Form */}
-                        <div className="lg:w-3/5">
-                            <div className="bg-cyber-900 border border-cyber-700 p-8 md:p-12 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.5)] relative overflow-hidden">
+                        <div className="w-full lg:w-3/5">
+                            <div className="bg-cyber-900 border border-cyber-700 p-6 sm:p-8 md:p-12 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.5)] relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-accent-blue/10 blur-[80px] rounded-full pointer-events-none"></div>
 
                                 <h3 className="text-2xl font-bold text-white mb-8">Send us a Message</h3>
@@ -77,7 +78,7 @@ const Contact = () => {
                         </div>
 
                         {/* Contact Info & Map */}
-                        <div className="lg:w-2/5 space-y-6 flex flex-col">
+                        <div className="w-full lg:w-2/5 space-y-6 flex flex-col">
                             <ContactInfoCard
                                 icon={FiMail}
                                 title="Email"
@@ -99,7 +100,7 @@ const Contact = () => {
                             />
 
                             {/* Map */}
-                            <div className="flex-grow w-full bg-cyber-800 rounded-2xl border border-cyber-700 overflow-hidden relative min-h-[250px] mt-6 group">
+                            <div className="flex-grow w-full bg-cyber-800 rounded-2xl border border-cyber-700 overflow-hidden relative min-min-h-[250px] w-full mt-6 group">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15225.869062330752!2d78.39659074095759!3d17.43732644265431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb911a37a7b82f%3A0xe5cd6b9f291e0aed!2sC9FV%2BFX%2C%20Hyderabad%2C%20Telangana%20500033!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                                     width="100%" 
@@ -117,7 +118,7 @@ const Contact = () => {
                         </div>
 
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
         </div>
     );

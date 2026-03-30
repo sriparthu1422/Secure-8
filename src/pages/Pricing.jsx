@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import { PricingCard } from '../components/Cards';
@@ -7,9 +8,9 @@ const Pricing = () => {
     return (
         <div>
             <section className="pt-32 pb-24 bg-cyber-950 relative overflow-hidden border-b border-cyber-800">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <LayoutContainer className="relative z-10">
                     <SectionTitle
                         title="Transparent, Accessible Education Plans"
                         subtitle="Enrollment Plans"
@@ -19,7 +20,7 @@ const Pricing = () => {
                         Choose the learning path that fits your career goals. Flexible payment options available with no hidden fees.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-center">
                         {/* Starter Plan */}
                         {/* Starter Plan */}
                         <PricingCard
@@ -64,24 +65,24 @@ const Pricing = () => {
                             ]}
                         />
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* FAQ Section (Optional/Additional layout content) */}
-            <section className="py-24 bg-cyber-900">
-                <div className="container mx-auto px-4 max-w-4xl">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900">
+                <LayoutContainer className="max-w-4xl">
                     <SectionTitle title="Frequently Asked Questions" center />
                     <div className="space-y-6 mt-12">
                         <div className="bg-cyber-800 p-6 rounded-2xl border border-cyber-700">
                             <h4 className="text-xl font-bold text-white mb-2">Can I switch plans later?</h4>
-                            <p className="text-slate-400">Yes, you can upgrade or downgrade your plan at any time. Prorated charges will be applied automatically.</p>
+                            <p className="text-slate-400 text-sm sm:text-base lg:text-lg">Yes, you can upgrade or downgrade your plan at any time. Prorated charges will be applied automatically.</p>
                         </div>
                         <div className="bg-cyber-800 p-6 rounded-2xl border border-cyber-700">
                             <h4 className="text-xl font-bold text-white mb-2">Do you offer scholarships or financial aid?</h4>
-                            <p className="text-slate-400">Yes, we offer flexible financing options and merit-based scholarships to ensure our educational programs are accessible to everyone.</p>
+                            <p className="text-slate-400 text-sm sm:text-base lg:text-lg">Yes, we offer flexible financing options and merit-based scholarships to ensure our educational programs are accessible to everyone.</p>
                         </div>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

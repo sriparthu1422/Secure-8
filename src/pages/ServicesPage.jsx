@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import { ServiceCard } from '../components/Cards';
@@ -8,9 +9,9 @@ const ServicesPage = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="pt-32 pb-20 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
+            <section className="py-16 md:py-12 sm:py-16 lg:py-20 lg:py-32 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden flex flex-col items-center justify-center text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+                <LayoutContainer className="relative z-10 text-center flex flex-col items-center justify-center">
                     <SectionTitle
                         title="Comprehensive Cybersecurity Services"
                         subtitle="We provide a wide range of Services"
@@ -19,13 +20,13 @@ const ServicesPage = () => {
                     <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
                         At Secure8, we provide expert-driven services across VAPT, cloud, IAM, and user awareness — helping you stay secure, compliant, and resilient. Explore our specialized cybersecurity and IAM services designed to meet your unique needs.
                     </p>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Services Grid Section */}
-            <section className="py-24 bg-cyber-900 border-b border-cyber-800">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+                <LayoutContainer>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <ServiceCard 
                             icon={FiShield} 
                             title="Information Security" 
@@ -69,15 +70,15 @@ const ServicesPage = () => {
                             link="/contact" 
                         />
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Our Customers Section */}
-            <section className="py-24 bg-cyber-950 border-b border-cyber-800 relative overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-950 border-b border-cyber-800 relative overflow-hidden">
                 {/* Decorative background blur */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-accent-cyan/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] min-h-[300px] w-full bg-accent-cyan/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
                 
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <LayoutContainer className="relative z-10 text-center">
                     <SectionTitle 
                         title="Trusted by Organizations" 
                         subtitle="Our Customers" 
@@ -88,34 +89,34 @@ const ServicesPage = () => {
                     </p>
 
                     {/* Logos Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
+                    <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 md:gap-12 lg:gap-16 opacity-70">
                         {/* Logo 1 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group">
+                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
                             <FiBox className="w-8 h-8 group-hover:text-accent-cyan transition-colors" />
                             <span className="text-xl font-bold tracking-wider font-mono">ACME INC</span>
                         </div>
                         {/* Logo 2 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group">
+                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
                             <FiHexagon className="w-8 h-8 group-hover:text-accent-blue transition-colors" />
                             <span className="text-xl font-bold tracking-wider font-mono">NEXUS</span>
                         </div>
                         {/* Logo 3 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group">
+                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
                             <FiGlobe className="w-8 h-8 group-hover:text-accent-cyan transition-colors" />
                             <span className="text-xl font-bold tracking-wider font-mono">GLOBAL</span>
                         </div>
                         {/* Logo 4 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group">
+                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
                             <FiCpu className="w-8 h-8 group-hover:text-accent-blue transition-colors" />
                             <span className="text-xl font-bold tracking-wider font-mono">SYNAPSE</span>
                         </div>
                         {/* Logo 5 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group col-span-2 sm:col-span-1 lg:col-span-1">
+                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
                             <FiTriangle className="w-8 h-8 group-hover:text-accent-cyan transition-colors" />
                             <span className="text-xl font-bold tracking-wider font-mono">APEX</span>
                         </div>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

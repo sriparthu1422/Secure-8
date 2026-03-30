@@ -11,9 +11,9 @@ const Stats = () => {
 
     return (
         <section className="py-20 bg-cyber-950 border-t border-cyber-800">
-            <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <SectionTitle title="Academy Metrics" subtitle="Student Success" center />
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {stats.map((stat, idx) => (
                         <div key={idx} className="p-8 rounded-2xl bg-cyber-900 border border-cyber-700 hover:border-accent-blue transition-colors duration-300 text-center box-glow-hover group">
                             <h3 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan mb-3 group-hover:scale-110 transition-transform">

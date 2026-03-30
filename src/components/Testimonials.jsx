@@ -48,13 +48,13 @@ const Testimonials = () => {
     ];
 
     return (
-        <section className="py-12 lg:py-24 bg-white overflow-hidden relative">
+        <section className="py-12 sm:py-16 lg:py-20 bg-white overflow-hidden relative">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 rounded-l-3xl z-0 transform translate-x-1/2"></div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Testimonials</span>
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6">
                         Hear It from Our Happy Customers
                     </h2>
                 </div>

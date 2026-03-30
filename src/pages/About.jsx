@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 // import Stats from '../components/Stats';
 import { FiCheckCircle, FiShield, FiUsers, FiAward } from 'react-icons/fi';
@@ -18,25 +19,25 @@ const About = () => {
     return (
         <div>
             {/* Hero Banner */}
-            <section className="pt-32 pb-20 bg-cyber-950 relative overflow-hidden border-b border-cyber-800">
+            <section className="py-16 md:py-12 sm:py-16 lg:py-20 lg:py-32 bg-cyber-950 relative overflow-hidden border-b border-cyber-800">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-accent-blue/5 blur-[100px] rounded-full"></div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
+                <LayoutContainer className="relative z-10 text-center">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                         Pioneering the Future of <span className="text-gradient">Cybersecurity Education</span>
                     </h1>
                     <p className="text-xl text-slate-400 max-w-3xl mx-auto">
                         Secure8 Technology Services is dedicated to preparing the next generation of cybersecurity professionals through practical and industry-focused training.
                     </p>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Mission & Story */}
-            <section className="py-24 bg-cyber-900 border-b border-cyber-800">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
-                        <div className="lg:w-1/2">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+                <LayoutContainer>
+                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+                        <div className="w-full lg:w-1/2">
                             <div className="relative">
-                                <div className="w-full h-[500px] rounded-3xl overflow-hidden border border-cyber-700 shadow-[0_0_30px_rgba(57, 255, 136,0.1)]">
+                                <div className="w-full min-h-[500px] w-full rounded-3xl overflow-hidden border border-cyber-700 shadow-[0_0_30px_rgba(57, 255, 136,0.1)]">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-cyber-950/80 to-transparent z-10"></div>
                                     <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" alt="Cyber Operations Center" className="w-full h-full object-cover" />
                                 </div>
@@ -53,15 +54,15 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="lg:w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <SectionTitle title="Our Mission is to Accelerate Your Career Transformation" subtitle="The Secure8 Academy Story" />
-                            <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                            <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
                                 Founded in 2023, Secure8 Technology Services focuses on cybersecurity training and Identity & Access Management solutions.
                             </p>
-                            <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                            <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
                                 Our programs bridge the gap between academic knowledge and real-world cybersecurity demands through hands-on labs, real attack simulations, and expert mentorship.
                             </p>
-                            <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                            <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
                                 We help learners develop practical skills required to protect digital systems and succeed in cybersecurity careers.
                             </p>
 
@@ -75,22 +76,22 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
             {/* <Stats /> */}
 
             {/* Leadership Team */}
-            <section className="py-24 bg-cyber-950">
-                <div className="container mx-auto px-4">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-950">
+                <LayoutContainer>
                     <SectionTitle title="Meet the Mentors Shaping Your Future" subtitle="Leadership Team" center />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-12 md:mt-16 w-full">
                         <TeamMember name="Marcus Thorne" role="Chief Information Security Officer" image="https://i.pravatar.cc/300?img=11" />
                         <TeamMember name="Dr. Elena Rostova" role="Lead Instructor, Threat Intelligence" image="https://i.pravatar.cc/300?img=32" />
                         <TeamMember name="James Chen" role="Head of Penetration Testing" image="https://i.pravatar.cc/300?img=12" />
                         <TeamMember name="Sarah Jenkins" role="Director of Cyber Operations" image="https://i.pravatar.cc/300?img=47" />
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
         </div>

@@ -24,12 +24,12 @@ const CaseStudies = () => {
     ];
 
     return (
-        <section className="py-12 lg:py-24 bg-slate-50">
-            <div className="container mx-auto px-4">
+        <section className="py-12 sm:py-16 lg:py-20 bg-slate-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 max-w-6xl mx-auto">
                     <div className="max-w-2xl mb-6 md:mb-0">
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Case Studies</span>
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
                             Real-World Cybersecurity Success Stories
                         </h2>
                     </div>
@@ -38,7 +38,7 @@ const CaseStudies = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
                     {cases.map((item, idx) => (
                         <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-lg h-96 flex flex-col justify-end">
                             {/* Background Mock Image */}

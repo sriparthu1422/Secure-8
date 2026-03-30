@@ -27,12 +27,12 @@ const BlogTeasers = () => {
     ];
 
     return (
-        <section className="py-12 lg:py-24 bg-cyber-900 border-t border-cyber-800">
-            <div className="container mx-auto px-4">
+        <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-t border-cyber-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 max-w-6xl mx-auto">
                     <div className="max-w-2xl mb-6 md:mb-0">
                         <span className="text-accent-blue font-bold tracking-wider uppercase text-sm mb-2 block">Latest Insights</span>
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
                             Cybersecurity News & Resources
                         </h2>
                     </div>
@@ -41,7 +41,7 @@ const BlogTeasers = () => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
                     {posts.map((post, idx) => (
                         <article key={idx} className="bg-cyber-800 rounded-2xl overflow-hidden shadow-lg border border-cyber-700 hover:border-accent-blue transition-all duration-300 group flex flex-col hover:-translate-y-2 box-glow-hover">
                             <div className={`w-full h-48 relative overflow-hidden`}>

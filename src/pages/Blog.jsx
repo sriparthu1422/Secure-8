@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import { BlogCard } from '../components/Cards';
@@ -9,9 +10,9 @@ const Blog = () => {
             <section className="pt-32 pb-20 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 {/* Background Grid Pattern */}
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-[0.2] z-0"></div>
-                <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-cyber-900 to-transparent z-0"></div>
+                <div className="absolute bottom-0 left-0 w-full min-h-[300px] w-full bg-gradient-to-t from-cyber-900 to-transparent z-0"></div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <LayoutContainer className="relative z-10">
                     <SectionTitle
                         title="Academy News & Educational Insights"
                         subtitle="Learning Hub"
@@ -21,7 +22,7 @@ const Blog = () => {
                     </p>
 
                     {/* Featured Post */}
-                    <div className="bg-cyber-900 border border-cyber-700 rounded-3xl overflow-hidden hover:border-accent-blue transition-colors group flex flex-col md:flex-row h-auto md:h-[400px]">
+                    <div className="bg-cyber-900 border border-cyber-700 rounded-3xl overflow-hidden hover:border-accent-blue transition-colors group flex flex-col md:flex-row h-auto md:min-h-[400px] w-full">
                         <div className="md:w-1/2 relative overflow-hidden">
                             <div className="absolute inset-0 bg-cyber-900/30 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200" alt="Featured Post" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -29,7 +30,7 @@ const Blog = () => {
                         <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                             <span className="inline-block px-4 py-1.5 bg-accent-blue/20 text-accent-cyan rounded-full text-sm font-bold mb-6 w-max border border-accent-blue/30 box-glow">FEATURED GUIDE</span>
                             <h3 className="text-3xl font-extrabold text-white mb-4 group-hover:text-accent-blue transition-colors">The Future of AI in Cybersecurity Defenses: A 2024 Guide</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed line-clamp-3">
+                            <p className="text-slate-400 mb-8 leading-relaxed line-clamp-3 text-sm sm:text-base lg:text-lg">
                                 Discover how advanced AI tools are transforming the way security teams detect, analyze, and mitigate threats in the modern tech ecosystem. Learn how to stay ahead.
                             </p>
                             <a href="/blog/zero-day" className="font-bold text-white flex items-center group-hover:text-accent-blue transition-colors">
@@ -37,12 +38,12 @@ const Blog = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Grid of Posts */}
-            <section className="py-24 bg-cyber-900">
-                <div className="container mx-auto px-4">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900">
+                <LayoutContainer>
                     <div className="flex flex-col md:flex-row justify-between items-center mb-12">
                         <h2 className="text-2xl font-bold text-white">Latest Articles</h2>
                         <div className="flex space-x-2 overflow-x-auto pb-4 md:pb-0 w-full md:w-auto mt-6 md:mt-0">
@@ -54,7 +55,7 @@ const Blog = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
                         <BlogCard
                             category="Career Advice"
                             title="How to Prepare for Your First Cybersecurity Interview in 2024"
@@ -104,7 +105,7 @@ const Blog = () => {
                             Load More Articles
                         </button>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
@@ -8,10 +9,10 @@ const CaseStudyDetails = () => {
         <div>
             {/* Hero */}
             <section className="pt-32 pb-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[600px] bg-[url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1600&q=80')] bg-cover bg-center opacity-20 filter grayscale"></div>
+                <div className="absolute top-0 left-0 w-full min-h-[600px] w-full bg-[url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1600&q=80')] bg-cover bg-center opacity-20 filter grayscale"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 via-cyber-950/80 to-transparent"></div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <LayoutContainer className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-block px-4 py-1.5 bg-accent-blue/20 text-accent-cyan rounded-full text-sm font-bold mb-6 border border-accent-blue/30 box-glow">CYBER PLACEMENTS</div>
                         <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
@@ -21,13 +22,13 @@ const CaseStudyDetails = () => {
                             How a former IT helpdesk professional transitioned into a Security Engineer role at a top enterprise tech company within 8 months.
                         </p>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Main Content */}
-            <section className="py-24 bg-cyber-900 border-b border-cyber-800">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+                <LayoutContainer className="max-w-4xl">
+                    <div className="prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white text-sm sm:text-base lg:text-lg">
                         <h2 className="text-3xl font-bold mb-6">Student Background</h2>
                         <p className="mb-8">
                             Sarah had a successful career in IT support, but she was looking for a more specialized security challenge and higher earning potential. With no formal cybersecurity experience, she decided to join Secure8 Academy's immersive Ethical Hacking Bootcamp to pivot her career.
@@ -81,7 +82,7 @@ const CaseStudyDetails = () => {
                             By partnering with our cyber career success team, Sarah successfully navigated the difficult technical interview process and secured her dream role as a Security Engineer at Google.
                         </p>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

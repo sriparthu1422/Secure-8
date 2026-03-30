@@ -5,12 +5,12 @@ import logo from '../assets/secure8-logo-new.jpg';
 
 const Footer = () => {
     return (
-        <footer className="bg-cyber-950 text-slate-400 pt-20 pb-10 border-t border-cyber-700 relative overflow-hidden">
+        <footer className="bg-cyber-950 text-slate-400 pt-16 md:pt-20 lg:pt-24 pb-8 lg:pb-12 border-t border-cyber-700 relative overflow-hidden text-sm sm:text-base lg:text-lg">
             {/* Decorative Glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-accent-blue to-transparent opacity-50"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-accent-cyan to-transparent opacity-80 shadow-[0_0_20px_rgba(57,255,136,0.8)]"></div>
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 lg:gap-12 mb-12 lg:mb-16">
 
                     {/* Company Info */}
                     <div>
@@ -21,13 +21,13 @@ const Footer = () => {
                             Secure8 Technology Services delivers practical cybersecurity education designed to prepare students and professionals for real-world security careers.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-800 border border-cyber-700 flex items-center justify-center hover:bg-accent-blue hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(57, 255, 136,0.5)]">
+                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-900 border border-cyber-700 flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan hover:bg-accent-blue/10 transition-all duration-300 box-glow-hover text-sm sm:text-base lg:text-lg">
                                 <FiTwitter className="w-5 h-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-800 border border-cyber-700 flex items-center justify-center hover:bg-accent-blue hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(57, 255, 136,0.5)]">
+                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-900 border border-cyber-700 flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan hover:bg-accent-blue/10 transition-all duration-300 box-glow-hover text-sm sm:text-base lg:text-lg">
                                 <FiLinkedin className="w-5 h-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-800 border border-cyber-700 flex items-center justify-center hover:bg-accent-blue hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(57, 255, 136,0.5)]">
+                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-900 border border-cyber-700 flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan hover:bg-accent-blue/10 transition-all duration-300 box-glow-hover text-sm sm:text-base lg:text-lg">
                                 <FiGithub className="w-5 h-5" />
                             </a>
                         </div>
@@ -56,9 +56,9 @@ const Footer = () => {
 
                     {/* Academies Links */}
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6">Academies</h4>
+                        <h4 className="text-white font-bold text-lg mb-6 tracking-wide">Academies</h4>
                         <ul className="space-y-4">
-                            {['Web Development', 'Cloud Architecture', 'Data Science & AI', 'UI/UX Design', 'DevOps Engineering'].map((link) => (
+                            {['Penetration Testing', 'Cloud Security', 'Incident Response (DFIR)', 'Web App Security', 'Red Team Operations'].map((link) => (
                                 <li key={link}>
                                     <Link to="/services" className="hover:text-accent-blue transition-colors text-sm">
                                         {link}
@@ -70,7 +70,7 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6">Contact</h4>
+                        <h4 className="text-white font-bold text-lg mb-6 tracking-wide">Contact</h4>
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-start">
                                 <FiMapPin className="w-5 h-5 mr-3 mt-0.5 text-accent-cyan flex-shrink-0" />
@@ -89,13 +89,13 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-cyber-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-                    <p className="mb-4 md:mb-0">
-                        &copy; {new Date().getFullYear()} Secure8 Technology Services. All rights reserved.
+                <div className="border-t border-cyber-800/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-mono opacity-80">
+                    <p className="text-accent-blue text-center md:text-left">
+                        &copy; {new Date().getFullYear()} SECURE-8 TECHNOLOGY SERVICES. ALL RIGHTS RESERVED.
                     </p>
-                    <div className="flex space-x-6">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                    <div className="flex space-x-6 text-slate-500">
+                        <a href="#" className="hover:text-accent-cyan transition-colors hover:text-glow">PRIVACY POLICY</a>
+                        <a href="#" className="hover:text-accent-cyan transition-colors hover:text-glow">TERMS OF SERVICE</a>
                     </div>
                 </div>
             </div>

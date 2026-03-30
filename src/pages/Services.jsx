@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import { ServiceCard } from '../components/Cards';
@@ -8,8 +9,8 @@ const Services = () => {
     return (
         <div>
             <section className="pt-22 pb-22 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+                <LayoutContainer className="relative z-10 text-center">
                     <SectionTitle
                         title="Kickstarting a Cyber-Ready Generation"
                         subtitle="Secure8 Academy"
@@ -18,12 +19,12 @@ const Services = () => {
                     <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-12">
                         Our mission is to train, upskill, and empower the next wave of cybersecurity professionals — starting now. Whether you’re a beginner or a professional, our courses and mentorship programs are designed to help you grow confidently in the field.
                     </p>
-                </div>
+                </LayoutContainer>
             </section>
 
-            <section className="py-24 bg-cyber-900 border-b border-cyber-800">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+                <LayoutContainer>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         <ServiceCard
                             icon={FiShield}
                             title="Web Application Pentesting"
@@ -61,7 +62,7 @@ const Services = () => {
                             link="/services/career-prep"
                         />
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

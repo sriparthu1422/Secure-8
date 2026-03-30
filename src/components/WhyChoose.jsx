@@ -1,81 +1,100 @@
 import React from 'react';
-import { ShieldCheck, UserCheck, CheckCircle2 } from 'lucide-react';
+import { ShieldAlert, Terminal, Lock, ChevronRight } from 'lucide-react';
 
 const WhyChoose = () => {
     return (
-        <section className="py-12 lg:py-24 bg-slate-900 text-white relative overflow-hidden text-center md:text-left">
-            {/* Background patterns */}
-            <div className="absolute top-0 right-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdjJIMFptMCAyMGg0MHYySDB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+PC9zdmc+')] z-0"></div>
+        <section className="py-12 sm:py-16 lg:py-20 bg-cyber-950 text-white relative overflow-hidden">
+            {/* Cyber Grid Background */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(57,255,136,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(57,255,136,0.02)_1px,transparent_1px)] bg-[size:40px_40px] z-0"></div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-blue-400 font-bold tracking-wider uppercase text-sm mb-2 block">Why Choose CyberGuard</span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-white leading-tight">
-                        Complete Cyber Defense Against Modern Attacks
+                    <span className="inline-block py-1 px-3 rounded-md bg-accent-blue/10 border border-accent-cyan/30 text-accent-cyan font-mono text-xs tracking-widest uppercase mb-4 shadow-[0_0_10px_rgba(57,255,136,0.2)]">
+                        System Architecture
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan text-glow">Secure-8</span>
                     </h2>
                     <p className="text-lg text-slate-400">
-                        Our multi-layered security approach ensures that your infrastructure remains resilient against both known vulnerabilities and emerging zero-day exploits.
+                        Our academy doesn't just teach theory. We immerse you in live attack simulations, advanced defense heuristics, and weaponized payloads.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 mb-20 max-w-6xl mx-auto">
-                    {/* Column 1 */}
-                    <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 backdrop-blur-sm relative">
-                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-blue-500 rounded-xl flex justify-center items-center shadow-lg">
-                            <ShieldCheck className="w-8 h-8 text-white" />
+                {/* Terminal Styled Section */}
+                <div className="max-w-6xl mx-auto bg-[#05080c] border border-cyber-700 rounded-xl overflow-hidden shadow-[0_10px_50px_rgba(57,255,136,0.05)] mb-16 lg:mb-20 group relative">
+                    {/* Header */}
+                    <div className="bg-[#0a111a] px-4 py-3 flex items-center border-b border-cyber-700/50">
+                        <div className="flex space-x-2 mr-4">
+                            <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
                         </div>
-                        <h3 className="text-2xl font-bold mb-4 mt-2">Advanced Threat Detection</h3>
-                        <p className="text-slate-300 mb-6 leading-relaxed">
-                            We utilize machine learning algorithms to map your network's baseline behavior, automatically detecting and neutralizing anomalous activities before they can disrupt operations.
-                        </p>
-                        <ul className="space-y-3">
-                            {['Behavioral Analysis', 'AI-Driven Heuristics', 'Automated Remediation'].map((item, idx) => (
-                                <li key={idx} className="flex items-center text-slate-400">
-                                    <CheckCircle2 className="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="text-xs text-slate-500 font-mono tracking-widest uppercase flex-1 text-center">root@secure8:/features# ls -la</div>
                     </div>
 
-                    {/* Column 2 */}
-                    <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 backdrop-blur-sm relative">
-                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-indigo-500 rounded-xl flex justify-center items-center shadow-lg">
-                            <UserCheck className="w-8 h-8 text-white" />
+                    {/* Body */}
+                    <div className="p-6 sm:p-8 lg:p-12 relative font-mono">
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:gap-12 relative z-10">
+                            {/* Column 1 */}
+                            <div>
+                                <div className="flex items-center text-accent-blue mb-4">
+                                    <Terminal className="w-6 h-6 mr-3" />
+                                    <h3 className="text-xl font-bold text-white tracking-wide">Live Attack Sims</h3>
+                                </div>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Execute real-world exploits in our safe containerized environments. Map networks, pivot through subnets, and exfiltrate data.
+                                </p>
+                                <ul className="space-y-3 text-sm">
+                                    {['Red Team Operations', 'Exploit Development', 'Post-Exploitation Tactics'].map((item, idx) => (
+                                        <li key={idx} className="flex items-start text-accent-cyan">
+                                            <ChevronRight className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Column 2 */}
+                            <div>
+                                <div className="flex items-center text-accent-blue mb-4">
+                                    <Lock className="w-6 h-6 mr-3" />
+                                    <h3 className="text-xl font-bold text-white tracking-wide">Enterprise Defense</h3>
+                                </div>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Learn to hunt threats, configure enterprise SIEMs, and respond to live incidents. Reverse engineer malware bypassing AV.
+                                </p>
+                                <ul className="space-y-3 text-sm">
+                                    {['Malware Analysis', 'Threat Hunting', 'Incident Response (DFIR)'].map((item, idx) => (
+                                        <li key={idx} className="flex items-start text-accent-cyan">
+                                            <ChevronRight className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <h3 className="text-2xl font-bold mb-4 mt-2">Zero Trust Architecture</h3>
-                        <p className="text-slate-300 mb-6 leading-relaxed">
-                            Never trust, always verify. Our zero trust frameworks authenticate and validate every access request on your network, isolating potential breaches and minimizing blast radius.
-                        </p>
-                        <ul className="space-y-3">
-                            {['Micro-segmentation', 'Continuous Verification', 'Least Privilege Access'].map((item, idx) => (
-                                <li key={idx} className="flex items-center text-slate-400">
-                                    <CheckCircle2 className="w-5 h-5 text-indigo-400 mr-2 flex-shrink-0" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
                     </div>
                 </div>
 
-                {/* 4 Stats row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto border-t border-slate-800 pt-16">
-                    <div className="text-center">
-                        <p className="text-4xl font-extrabold text-white mb-2">5,000+</p>
-                        <p className="text-slate-400 font-medium">Hours of Active Defense</p>
-                    </div>
-                    <div className="text-center">
-                        <p className="text-4xl font-extrabold text-blue-400 mb-2">300+</p>
-                        <p className="text-slate-400 font-medium">Happy Enterprise Customers</p>
-                    </div>
-                    <div className="text-center">
-                        <p className="text-4xl font-extrabold text-indigo-400 mb-2">100%</p>
-                        <p className="text-slate-400 font-medium">Compliance Rate Guarantee</p>
-                    </div>
-                    <div className="text-center">
-                        <p className="text-4xl font-extrabold text-emerald-400 mb-2">24/7</p>
-                        <p className="text-slate-400 font-medium">Global SOC Support</p>
-                    </div>
+                {/* Cyber Stats Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
+                    {[
+                        { num: '5,000+', label: 'Students Certified' },
+                        { num: '30+', label: 'Advanced Modules' },
+                        { num: '98%', label: 'Success Rate' },
+                        { num: '24/7', label: 'Lab Access' }
+                    ].map((stat, idx) => (
+                        <div key={idx} className="bg-cyber-900/50 backdrop-blur-md border border-cyber-800 p-4 sm:p-6 rounded-2xl text-center group hover:border-accent-cyan transition-all duration-300 box-glow-hover">
+                            <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400 group-hover:from-accent-blue group-hover:to-accent-cyan transition-all duration-300 mb-2">
+                                {stat.num}
+                            </p>
+                            <p className="text-slate-400 text-sm font-semibold tracking-wide uppercase group-hover:text-slate-300 transition-colors">
+                                {stat.label}
+                            </p>
+                        </div>
+                    ))}
                 </div>
 
             </div>

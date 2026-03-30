@@ -33,11 +33,11 @@ const TestimonialSlider = () => {
     ];
 
     return (
-        <section className="py-12 lg:py-24 bg-cyber-900 relative overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <SectionTitle title="Hear From Our Alumni" subtitle="Student Reviews" center />
 
                 <div className="max-w-4xl mx-auto mt-12">
@@ -55,7 +55,7 @@ const TestimonialSlider = () => {
                     >
                         {testimonials.map((test, index) => (
                             <SwiperSlide key={index}>
-                                <div className="bg-cyber-800 border border-cyber-700 p-8 md:p-12 lg:p-16 rounded-3xl relative h-full flex flex-col items-center">
+                                <div className="bg-cyber-900/40 backdrop-blur-xl border border-cyber-700/50 p-6 sm:p-8 md:p-12 lg:p-16 rounded-3xl relative h-full flex flex-col items-center box-glow-hover transition-shadow duration-500">
                                     <FaQuoteLeft className="absolute top-6 left-6 md:top-8 md:left-8 w-8 h-8 md:w-12 md:h-12 text-cyber-700/50" />
 
                                     <div className="flex text-yellow-500 mb-6 justify-center">
@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
                                         <img
                                             src={test.image}
                                             alt={test.name}
-                                            className="w-16 h-16 rounded-full border-2 border-accent-blue p-0.5 object-cover mb-4 shadow-[0_0_15px_rgba(57, 255, 136,0.4)]"
+                                            className="w-16 h-16 rounded-full border-2 border-accent-cyan p-0.5 object-cover mb-4 shadow-[0_0_20px_rgba(57,255,136,0.5)]"
                                         />
                                         <h4 className="font-bold text-white text-lg">{test.name}</h4>
                                         <p className="text-sm text-accent-cyan tracking-wide font-medium">{test.role}</p>

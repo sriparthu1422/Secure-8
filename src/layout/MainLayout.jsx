@@ -8,9 +8,11 @@ const MainLayout = () => {
     return (
         <div className="min-h-screen flex flex-col font-sans">
             <Header />
-            <main className="flex-grow pt-24 overflow-x-hidden"> {/* pt-24 offsets the fixed header */}
+            <main className="flex-grow pt-20 lg:pt-24 flex flex-col w-full"> {/* offsets the fixed header */}
                 <PageTransition>
-                    <Outlet />
+                    <div className="flex-grow w-full">
+                        <Outlet />
+                    </div>
                 </PageTransition>
             </main>
             <Footer />

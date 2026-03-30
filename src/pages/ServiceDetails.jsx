@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
 import { FiCheckCircle, FiShield, FiArrowRight } from 'react-icons/fi';
@@ -11,7 +12,7 @@ const ServiceDetails = () => {
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-10"></div>
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent to-cyber-950"></div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <LayoutContainer className="relative z-10">
                     <div className="max-w-3xl">
                         <div className="flex items-center space-x-3 mb-6">
                             <FiShield className="w-8 h-8 text-accent-cyan" />
@@ -27,18 +28,18 @@ const ServiceDetails = () => {
                             Enroll in Academy
                         </button>
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Main Content */}
-            <section className="py-24 bg-cyber-900 border-b border-cyber-800">
-                <div className="container mx-auto px-4 max-w-7xl">
+            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+                <LayoutContainer className="max-w-7xl">
                     <div className="flex flex-col lg:flex-row gap-16">
 
                         {/* Left Column (Content) */}
                         <div className="lg:w-2/3">
                             <SectionTitle title="Comprehensive Curriculum" />
-                            <div className="prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white">
+                            <div className="prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white text-sm sm:text-base lg:text-lg">
                                 <p>
                                     Modern cybersecurity requires a diverse skill set. The traditional concept of perimeter defense has evolved with the advent of remote work, cloud infrastructure, and sophisticated threat actors. To defend today's networks, you need practical, hands-on offensive and defensive understanding.
                                 </p>
@@ -78,7 +79,7 @@ const ServiceDetails = () => {
                             {/* <div className="bg-gradient-cyber p-8 rounded-3xl border border-cyber-700 relative overflow-hidden box-glow">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent-blue/10 blur-[40px] rounded-full"></div>
                                 <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Start Your Free Trial Lab</h3>
-                                <p className="text-slate-400 mb-8 relative z-10">Our instructors will guide you through your first interactive security lab and outline your career map.</p>
+                                <p className="text-slate-400 mb-8 relative z-10 text-sm sm:text-base lg:text-lg">Our instructors will guide you through your first interactive security lab and outline your career map.</p>
                                 <button className="w-full bg-accent-blue hover:bg-[#0E6B3A] text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center relative z-10">
                                     Start Trial Now <FiArrowRight className="ml-2" />
                                 </button>
@@ -87,15 +88,15 @@ const ServiceDetails = () => {
                             <div className="bg-cyber-800 p-8 rounded-3xl border border-cyber-700">
                                 <h3 className="text-xl font-bold text-white mb-6">Related Academies</h3>
                                 <ul className="space-y-4">
-                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors"><FiArrowRight className="mr-3 text-accent-cyan" /> Cloud Security Architecture</a></li>
-                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors"><FiArrowRight className="mr-3 text-accent-cyan" /> Incident Response Masterclass</a></li>
-                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors"><FiArrowRight className="mr-3 text-accent-cyan" /> Threat Intel Fundamentals</a></li>
+                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg"><FiArrowRight className="mr-3 text-accent-cyan" /> Cloud Security Architecture</a></li>
+                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg"><FiArrowRight className="mr-3 text-accent-cyan" /> Incident Response Masterclass</a></li>
+                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg"><FiArrowRight className="mr-3 text-accent-cyan" /> Threat Intel Fundamentals</a></li>
                                 </ul>
                             </div>
                         </div>
 
                     </div>
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

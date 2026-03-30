@@ -1,4 +1,5 @@
 import React from 'react';
+import LayoutContainer from '../components/LayoutContainer';
 import CTA from '../components/CTA';
 import { FiUser, FiCalendar, FiTag, FiSearch } from 'react-icons/fi';
 
@@ -7,7 +8,7 @@ const BlogDetails = () => {
         <div>
             {/* Hero */}
             <section className="pt-32 pb-20 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10 max-w-4xl">
+                <LayoutContainer className="relative z-10 max-w-4xl">
                     <div className="mb-6 flex flex-wrap items-center text-sm text-slate-400 gap-4">
                         <span className="px-3 py-1 bg-accent-purple/20 text-accent-cyan border border-accent-purple/30 rounded-full font-bold uppercase tracking-wider box-glow">Career Advice</span>
                         <span className="flex items-center"><FiCalendar className="mr-2" /> October 15, 2024</span>
@@ -17,15 +18,15 @@ const BlogDetails = () => {
                     <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
                         How to Prepare for Your Next Technical Interview in 2024
                     </h1>
-                </div>
+                </LayoutContainer>
             </section>
 
             {/* Main Content Area */}
             <section className="py-16 bg-cyber-900 border-b border-cyber-800">
-                <div className="container mx-auto px-4 max-w-7xl flex flex-col lg:flex-row gap-12">
+                <LayoutContainer className="max-w-7xl flex flex-col lg:flex-row gap-12">
 
                     {/* Article Body */}
-                    <article className="lg:w-2/3 prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white prose-a:text-accent-blue hover:prose-a:text-accent-cyan">
+                    <article className="lg:w-2/3 prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white prose-a:text-accent-blue hover:prose-a:text-accent-cyan text-sm sm:text-base lg:text-lg">
                         <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80" alt="Cyber Threat" className="w-full h-auto rounded-3xl mb-10 border border-cyber-700" />
 
                         <p className="lead text-xl text-slate-200 font-medium">
@@ -68,7 +69,7 @@ Stage 4: Final Behavioral Round with Engineering Leadership`}</code>
                             <h3 className="text-xl font-bold text-white mb-6">Search</h3>
                             <div className="relative">
                                 <input type="text" placeholder="Search articles..." className="w-full bg-cyber-950 border border-cyber-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent-blue transition-colors pl-12" />
-                                <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                                <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5 text-sm sm:text-base lg:text-lg" />
                             </div>
                         </div>
 
@@ -78,7 +79,7 @@ Stage 4: Final Behavioral Round with Engineering Leadership`}</code>
                             <ul className="space-y-3">
                                 {['Career Advice (12)', 'Development (8)', 'Productivity (15)', 'News & Press (5)'].map((cat, i) => (
                                     <li key={i}>
-                                        <a href="#" className="flex justify-between items-center text-slate-400 hover:text-accent-blue transition-colors pb-3 border-b border-cyber-700">
+                                        <a href="#" className="flex justify-between items-center text-slate-400 hover:text-accent-blue transition-colors pb-3 border-b border-cyber-700 text-sm sm:text-base lg:text-lg">
                                             <span>{cat.split(' (')[0]}</span>
                                             <span className="text-xs bg-cyber-900 border border-cyber-700 px-2 py-1 rounded-full">{cat.split('(')[1].replace(')', '')}</span>
                                         </a>
@@ -110,7 +111,7 @@ Stage 4: Final Behavioral Round with Engineering Leadership`}</code>
 
                     </aside>
 
-                </div>
+                </LayoutContainer>
             </section>
 
             <CTA />

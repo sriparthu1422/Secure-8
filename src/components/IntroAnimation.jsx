@@ -61,7 +61,7 @@ const IntroAnimation = ({ onComplete }) => {
             )}
 
             {/* Deep background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] min-h-[500px] w-full bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
         </div>
     );
 };
