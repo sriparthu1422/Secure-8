@@ -1,24 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiTerminal, FiShield } from 'react-icons/fi';
-
+import heroBg from '../assets/hero-cyber-bg.png';
 
 const Hero = () => {
     return (
-        <section className="relative py-16 lg:py-0 min-h-[calc(100vh-6rem)] w-full overflow-hidden bg-cyber-950 flex flex-col justify-center items-center w-full">
-            {/* Dynamic CSS Cyber Grid Background */}
-            <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(57,255,136,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(57,255,136,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-            
-            {/* Scanning Line overlay */}
-            <div className="absolute inset-0 w-full h-[150%] bg-gradient-to-b from-transparent via-accent-cyan/10 to-transparent -translate-y-full animate-scanline pointer-events-none z-0"></div>
+        <section
+            className="relative py-16 lg:py-0 min-h-[100dvh] w-full overflow-hidden bg-cover bg-top bg-no-repeat flex flex-col justify-center items-center"
+            style={{ backgroundImage: `url(${heroBg})` }}
+        >
+            {/* Cyber Grid Pattern Overlay */}
+            <div className="absolute inset-0 bg-grid bg-grid-fade opacity-60 z-0"></div>
 
-            {/* Glowing Accent Orbs */}
-            <div className="absolute top-0 right-1/4 w-[600px] min-h-[600px] w-full bg-accent-blue/10 rounded-full blur-[150px] z-0 pointer-events-none mix-blend-screen"></div>
-            <div className="absolute bottom-1/4 left-1/4 w-[500px] min-h-[500px] w-full bg-accent-cyan/10 rounded-full blur-[120px] z-0 pointer-events-none mix-blend-screen"></div>
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-cyber-950 to-transparent z-10 pointer-events-none"></div>
+            {/* Dark Overlay for Readability */}
+            <div className="absolute inset-0 bg-cyber-950/60 sm:bg-cyber-950/50 z-0 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 via-cyber-950/30 to-transparent z-0"></div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col items-center justify-center gap-12 lg:gap-16 w-full">
-                
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col items-center justify-center gap-12 lg:gap-16 w-full -mt-16 sm:-mt-20 lg:-mt-24">
+
                 {/* Text Content */}
                 <div className="w-full max-w-4xl flex flex-col items-center text-center">
                     {/* Cyber Badge */}

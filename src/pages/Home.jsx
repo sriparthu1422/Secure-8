@@ -22,7 +22,7 @@ const Home = () => {
                         subtitle="Accelerated Growth"
                         center
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 max-w-7xl mx-auto">
                         <FeatureCard
                             icon={FiBook}
                             title="Industry Experts"
@@ -67,7 +67,7 @@ const Home = () => {
                         subtitle="What We Offer"
                         center
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10">
                         <ServiceCard icon={FiHash} title="Information Security" description="We protect your digital assets through strategic infosec programs, risk assessments, and compliance-driven security controls." link="/services/network" />
                         <ServiceCard icon={FaBug} title="Penetration Testing" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Find weaknesses before hackers do</strong>We simulate real-world cyberattacks on your web and mobile applications to uncover vulnerabilities—so you can fix them before they're exploited.</>} link="/services/cloud" />
                         <ServiceCard icon={FiCode} title="API Security Testing" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Secure the connections that power your app</strong>Your APIs are the backbone of your product. We test them for hidden flaws like IDOR, broken authentication, and injection risks to protect your data.</>} link="/services/encryption" />
@@ -119,7 +119,7 @@ const Home = () => {
             <section className="py-12 sm:py-16 lg:py-20 bg-cyber-950 border-t border-cyber-800">
                 <LayoutContainer className="relative z-10">
                     <SectionTitle title="Academy News & Educational Resources" subtitle="Latest Insights" center />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-12 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 max-w-7xl mx-auto">
                         <BlogCard
                             category="Career Advice"
                             title="How to Prepare for Your First Cybersecurity Interview"

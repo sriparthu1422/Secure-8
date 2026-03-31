@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
 export const ServiceCard = ({ icon: Icon, title, description, link }) => (
-    <Link to={link || "/services/details"} className="group p-6 sm:p-8 rounded-2xl bg-[#0a111a]/60 backdrop-blur-xl border border-cyber-700/50 hover:border-accent-cyan/50 transition-all duration-500 box-glow-hover flex flex-col h-full hover:-translate-y-2 relative overflow-hidden">
+    <Link to={link || "/services/details"} className="group p-6 sm:p-8 rounded-2xl bg-[#0a111a]/60 backdrop-blur-xl border border-cyber-700/50 hover:border-accent-cyan/50 transition-all duration-500 box-glow-hover flex flex-col h-full lg:hover:-translate-y-2 relative overflow-hidden active:scale-[0.98]">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent-blue via-accent-cyan to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out z-0"></div>
         <div className="absolute inset-0 bg-accent-blue/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
         
@@ -31,7 +31,7 @@ export const FeatureCard = ({ icon: Icon, title, description }) => (
 );
 
 export const CaseStudyCard = ({ image, title, description, category, link }) => (
-    <Link to={link || "/case-studies/details"} className="group block relative rounded-2xl overflow-hidden shadow-lg min-h-[300px] w-full sm:min-h-[400px] w-full flex flex-col justify-end border border-cyber-700 hover:border-accent-blue transition-all duration-300 box-glow-hover">
+    <Link to={link || "/case-studies/details"} className="group block relative rounded-2xl overflow-hidden shadow-lg min-h-[350px] w-full sm:min-h-[400px] flex flex-col justify-end border border-cyber-700 hover:border-accent-blue transition-all duration-300 box-glow-hover active:scale-[0.98]">
         <div className={`absolute inset-0 bg-gradient-to-b from-transparent to-cyber-950/90 z-10`}></div>
         <img
             src={image || "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"}
@@ -54,7 +54,7 @@ export const CaseStudyCard = ({ image, title, description, category, link }) => 
 );
 
 export const BlogCard = ({ category, title, author, date, image, link }) => (
-    <article className="bg-cyber-800 rounded-2xl overflow-hidden border border-cyber-700 hover:border-accent-purple transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+    <article className="bg-cyber-800 rounded-2xl overflow-hidden border border-cyber-700 hover:border-accent-purple transition-all duration-300 group flex flex-col h-full lg:hover:-translate-y-1 active:scale-[0.98] cursor-pointer">
         <div className="relative h-48 overflow-hidden">
             <div className="absolute inset-0 bg-cyber-900/40 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
             <img src={image || "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

@@ -28,8 +28,8 @@
 }
 
 @layer base {
-  body {
-    @apply text-slate-300 bg-cyber-950 antialiased selection:bg-accent-blue/30 selection:text-white;
+  html, body {
+    @apply text-slate-300 bg-cyber-950 antialiased selection:bg-accent-blue/30 selection:text-white overflow-x-hidden;
   }
 }
 
@@ -52,6 +52,17 @@
 
   .bg-gradient-cyber {
     @apply bg-gradient-to-br from-cyber-900 via-cyber-950 to-cyber-900;
+  }
+
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(57, 255, 136, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(57, 255, 136, 0.04) 1px, transparent 1px);
+  }
+
+  .bg-grid-fade {
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   }
 
   @keyframes scanline {

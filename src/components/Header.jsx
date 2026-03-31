@@ -17,7 +17,7 @@ const Header = () => {
         { name: 'Contact', path: '/contact' },
     ];
 
-    const activeStyle = "text-accent-cyan font-semibold drop-shadow-[0_0_8px_rgba(57,255,136,0.8)] relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent-cyan";
+    const activeStyle = "text-accent-cyan font-bold drop-shadow-[0_0_12px_rgba(57,255,136,1)] relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent-cyan after:shadow-[0_0_10px_rgba(57,255,136,0.8)]";
     const inactiveStyle = "text-slate-300 font-medium relative hover:text-accent-cyan hover:drop-shadow-[0_0_8px_rgba(57,255,136,0.5)] transition-all duration-300 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent-cyan after:scale-x-0 after:origin-right hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300";
 
     return (
@@ -64,7 +64,7 @@ const Header = () => {
 
             {/* Mobile Nav Drawer */}
             {isOpen && (
-                <div className="lg:hidden absolute top-20 left-0 w-full bg-cyber-950/95 backdrop-blur-xl border-b border-cyber-800/50 shadow-[0_20px_40px_rgba(0,0,0,0.8)] pb-6 px-4 sm:px-6 flex flex-col space-y-4">
+                <div className="lg:hidden absolute top-20 left-0 w-full bg-cyber-950/98 backdrop-blur-xl border-b border-cyber-800/80 shadow-[0_20px_50px_rgba(0,0,0,0.9)] pb-6 px-4 sm:px-6 flex flex-col space-y-4 animate-slide-down origin-top">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.name}
