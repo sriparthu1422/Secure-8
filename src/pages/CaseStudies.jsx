@@ -7,7 +7,7 @@ import { CaseStudyCard } from '../components/Cards';
 const CaseStudies = () => {
     return (
         <div>
-            <section className="pt-32 pb-20 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 <div className="absolute top-0 right-0 w-[600px] min-h-[600px] w-full bg-accent-purple/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
                 <LayoutContainer className="relative z-10 text-center">
                     <SectionTitle
@@ -23,7 +23,7 @@ const CaseStudies = () => {
 
             <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
                 <LayoutContainer>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         <CaseStudyCard
                             image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
                             title="Security Engineer at Google"

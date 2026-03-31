@@ -26,7 +26,7 @@ const ContactInfoCard = ({ icon: Icon, title, content, link, content2, link2 }) 
 const Contact = () => {
     return (
         <div>
-            <section className="py-16 md:py-12 sm:py-16 lg:py-20 lg:py-32 bg-cyber-950 relative overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full min-h-[500px] w-full bg-gradient-to-b from-accent-blue/10 to-transparent z-0"></div>
 
                 <LayoutContainer className="relative z-10">
@@ -100,7 +100,7 @@ const Contact = () => {
                             />
 
                             {/* Map */}
-                            <div className="flex-grow w-full bg-cyber-800 rounded-2xl border border-cyber-700 overflow-hidden relative min-min-h-[250px] w-full mt-6 group">
+                            <div className="flex-grow w-full bg-cyber-800 rounded-2xl border border-cyber-700 overflow-hidden relative min-h-[300px] w-full mt-6 group">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15225.869062330752!2d78.39659074095759!3d17.43732644265431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb911a37a7b82f%3A0xe5cd6b9f291e0aed!2sC9FV%2BFX%2C%20Hyderabad%2C%20Telangana%20500033!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                                     width="100%" 

@@ -8,7 +8,7 @@ const CaseStudyDetails = () => {
     return (
         <div>
             {/* Hero */}
-            <section className="pt-32 pb-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full min-h-[600px] w-full bg-[url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1600&q=80')] bg-cover bg-center opacity-20 filter grayscale"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 via-cyber-950/80 to-transparent"></div>
 

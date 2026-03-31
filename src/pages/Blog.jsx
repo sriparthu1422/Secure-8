@@ -7,7 +7,7 @@ import { BlogCard } from '../components/Cards';
 const Blog = () => {
     return (
         <div>
-            <section className="pt-32 pb-20 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 {/* Background Grid Pattern */}
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-[0.2] z-0"></div>
                 <div className="absolute bottom-0 left-0 w-full min-h-[300px] w-full bg-gradient-to-t from-cyber-900 to-transparent z-0"></div>
@@ -55,7 +55,7 @@ const Blog = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-16">
                         <BlogCard
                             category="Career Advice"
                             title="How to Prepare for Your First Cybersecurity Interview in 2024"

@@ -7,7 +7,7 @@ const BlogDetails = () => {
     return (
         <div>
             {/* Hero */}
-            <section className="pt-32 pb-20 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 <LayoutContainer className="relative z-10 max-w-4xl">
                     <div className="mb-6 flex flex-wrap items-center text-sm text-slate-400 gap-4">
                         <span className="px-3 py-1 bg-accent-purple/20 text-accent-cyan border border-accent-purple/30 rounded-full font-bold uppercase tracking-wider box-glow">Career Advice</span>

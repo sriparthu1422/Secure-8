@@ -42,7 +42,7 @@ const About = () => {
                                     <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" alt="Cyber Operations Center" className="w-full h-full object-cover" />
                                 </div>
                                 {/* Floating badge */}
-                                <div className="absolute -bottom-8 -right-8 bg-cyber-800 border border-cyber-700 p-6 rounded-2xl shadow-xl backdrop-blur-md hidden md:block">
+                                <div className="absolute -bottom-8 -right-8 z-20 bg-cyber-800 border border-cyber-700 p-6 rounded-2xl shadow-xl backdrop-blur-md hidden md:block">
                                     <div className="flex items-center space-x-4">
                                         <FiShield className="w-12 h-12 text-accent-blue" />
                                         <div>

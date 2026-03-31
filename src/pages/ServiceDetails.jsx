@@ -8,7 +8,7 @@ const ServiceDetails = () => {
     return (
         <div>
             {/* Hero */}
-            <section className="pt-32 pb-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-10"></div>
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent to-cyber-950"></div>
 
@@ -48,7 +48,7 @@ const ServiceDetails = () => {
                                 </p>
 
                                 <h3 className="text-2xl font-bold mt-12 mb-6">Overview of Features</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 not-prose">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-12 not-prose">
                                     {[
                                         'Advanced Penetration Testing',
                                         'Network Traffic Analysis',

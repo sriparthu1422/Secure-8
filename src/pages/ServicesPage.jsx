@@ -9,7 +9,7 @@ const ServicesPage = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="py-16 md:py-12 sm:py-16 lg:py-20 lg:py-32 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden flex flex-col items-center justify-center text-center">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden flex flex-col items-center justify-center text-center">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
                 <LayoutContainer className="relative z-10 text-center flex flex-col items-center justify-center">
                     <SectionTitle
@@ -26,7 +26,7 @@ const ServicesPage = () => {
             {/* Services Grid Section */}
             <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
                 <LayoutContainer>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         <ServiceCard 
                             icon={FiShield} 
                             title="Information Security" 

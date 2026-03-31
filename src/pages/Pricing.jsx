@@ -7,7 +7,7 @@ import { PricingCard } from '../components/Cards';
 const Pricing = () => {
     return (
         <div>
-            <section className="pt-32 pb-24 bg-cyber-950 relative overflow-hidden border-b border-cyber-800">
+            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative overflow-hidden border-b border-cyber-800">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
 
                 <LayoutContainer className="relative z-10">
@@ -20,7 +20,7 @@ const Pricing = () => {
                         Choose the learning path that fits your career goals. Flexible payment options available with no hidden fees.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto items-center">
                         {/* Starter Plan */}
                         {/* Starter Plan */}
                         <PricingCard

@@ -5,12 +5,12 @@ import logo from '../assets/secure8-logo-new.jpg';
 
 const Footer = () => {
     return (
-        <footer className="bg-cyber-950 text-slate-400 pt-16 md:pt-20 lg:pt-24 pb-8 lg:pb-12 border-t border-cyber-700 relative overflow-hidden text-sm sm:text-base lg:text-lg">
+        <footer className="bg-cyber-950 text-slate-400 py-12 sm:py-16 lg:py-20 border-t border-cyber-700 relative overflow-hidden text-sm sm:text-base lg:text-lg">
             {/* Decorative Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-accent-cyan to-transparent opacity-80 shadow-[0_0_20px_rgba(57,255,136,0.8)]"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 lg:gap-12 mb-12 lg:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 mb-12 lg:mb-16">
 
                     {/* Company Info */}
                     <div>
