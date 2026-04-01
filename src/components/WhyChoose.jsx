@@ -13,7 +13,7 @@ const WhyChoose = () => {
                         System Architecture
                     </span>
                     <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-[1.1] tracking-tight">
-                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan text-glow">Secure8 Technology Services</span>?
+                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan text-glow-sm">Secure8 Technology Services</span>?
                         <span className="block mt-2 text-xl sm:text-2xl md:text-3xl text-slate-300 font-bold">
                             We Train You for Real Cybersecurity Careers — Not Just Certifications
                         </span>
