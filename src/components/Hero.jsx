@@ -28,7 +28,7 @@ const Hero = () => {
 
                     {/* Headline */}
                     <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mb-6 leading-[1.15] lg:leading-[1.1] w-full">
-                        <span className="block text-white mb-2">Learn Cybersecurity by Doing — Not Just Watching</span>
+                        <span className="block text-white mb-2">Learn Cybersecurity by Doing - Not Just Watching</span>
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-accent-cyan to-white pb-2 text-glow-sm">
                             Become Job-Ready in Ethical Hacking & VAPT
                         </span>

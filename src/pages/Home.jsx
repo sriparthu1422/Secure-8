@@ -18,40 +18,41 @@ const Home = () => {
             <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-t border-cyber-800">
                 <LayoutContainer className="relative z-10">
                     <SectionTitle
-                        title="Accelerating Your Career with Cyber Training"
-                        subtitle="Accelerated Growth"
+                        title="Accelerating Your Career with Cyber Training Build"
+                        subtitle="Real Cybersecurity Skills That Get You Hired"
+                        mainTitle="Learn directly from industry experts, work on real-world labs, and gain the practical experience companies actually look for."
                         center
                     />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 max-w-7xl mx-auto">
                         <FeatureCard
                             icon={FiBook}
                             title="Industry Experts"
-                            description="Learn from experienced cybersecurity professionals working in penetration testing, security operations, and identity management."
+                            description="Learn from cybersecurity professionals actively working in penetration testing, SOC operations, and identity security not just trainers, but real practitioners."
                         />
                         <FeatureCard
                             icon={FiMonitor}
                             title="Hands-on Projects"
-                            description="Practice in real cybersecurity labs using vulnerable environments such as DVWA, JuiceShop, and bWAPP."
+                            description="Work on real-world labs like DVWA, JuiceShop, and bWAPP. Practice identifying and exploiting vulnerabilities using industry-standard tools."
                         />
                         <FeatureCard
                             icon={FiAward}
                             title="Career Support"
-                            description="Receive resume guidance, interview preparation, and placement support to start your cybersecurity career."
+                            description="We don’t stop at training. Get resume building, mock interviews, and placement guidance to help you confidently enter the cybersecurity industry."
                         />
                         <FeatureCard
                             icon={FiTarget}
                             title="Interactive Cyber Labs"
-                            description="Experience real-world ethical hacking and cybersecurity defense scenarios through hands-on labs."
+                            description="Train in simulated environments that replicate real cyber attacks. Learn how to think like a hacker and defend like a professional."
                         />
                         <FeatureCard
                             icon={FiUserCheck}
                             title="Live Expert Mentorship"
-                            description="Work directly with experienced security professionals who guide your learning journey."
+                            description="Get direct guidance from mentors who help you understand concepts deeply, solve real problems, and stay on track."
                         />
                         <FeatureCard
                             icon={FiActivity}
                             title="Security Career Assessment"
-                            description="Dedicated career support designed to help students secure cybersecurity roles."
+                            description="Understand where you stand and what to improve. Our structured guidance helps you move from beginner to job-ready with clarity."
                         />
                     </div>
                 </LayoutContainer>
