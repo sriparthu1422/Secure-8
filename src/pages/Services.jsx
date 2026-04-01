@@ -7,66 +7,71 @@ import { FiShield, FiDatabase, FiSmartphone, FiCloud, FiUserCheck, FiTarget } fr
 
 const Services = () => {
     return (
-        <div>
-            <section className="pt-22 pb-22 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+        <div className="flex flex-col w-full overflow-x-hidden">
+            {/* Hero Section */}
+            <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24 lg:pt-32 lg:pb-40 bg-cyber-950 border-b border-cyber-800 overflow-hidden">
+                {/* Decorative background blur - adjusted to be responsive and avoid overflow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl aspect-square bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+                
                 <LayoutContainer className="relative z-10 text-center">
                     <SectionTitle
-                        title="Kickstarting a Cyber-Ready Generation"
-                        subtitle="Secure8 Academy"
+                        title="Building the Next Generation of Cybersecurity Experts"
+                        subtitle="Secure8 Cybersecurity Academy"
                         center
                     />
-                    <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-12">
-                        Our mission is to train, upskill, and empower the next wave of cybersecurity professionals — starting now. Whether you’re a beginner or a professional, our courses and mentorship programs are designed to help you grow confidently in the field.
+                    <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 sm:mb-12 leading-relaxed px-4">
+                        At Secure8 Technology Services, we don’t just teach cybersecurity - we prepare you for real-world challenges. Through hands-on labs, expert mentorship, and industry-focused training, we help beginners, students, and professionals build the skills needed to succeed in today’s security landscape.
                     </p>
                 </LayoutContainer>
             </section>
 
-            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+            {/* Services Grid Section */}
+            <section className="py-12 sm:py-20 lg:py-28 bg-cyber-900 border-b border-cyber-800 relative">
                 <LayoutContainer>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
                         <ServiceCard
                             icon={FiShield}
                             title="Web Application Pentesting"
-                            description="Learn how hackers break into web apps & how to stop them. Covers OWASP Top 10, Burp Suite, and live labs."
+                            description="Learn how attackers exploit web applications — and how to stop them. Master OWASP Top 10, Burp Suite, and real-world attack scenarios through hands-on labs."
                             link="/services/web-pentesting"
                         />
                         <ServiceCard
                             icon={FiDatabase}
                             title="API Security Testing"
-                            description="Master modern API attacks like Broken Auth, BOLA, and Mass Assignment using tools like Postman & Burp Suite."
+                            description="Master modern API attacks like Broken Authentication, BOLA, and Mass Assignment. Gain hands-on experience using tools like Postman and Burp Suite."
                             link="/services/api-security"
                         />
                         <ServiceCard
                             icon={FiSmartphone}
                             title="Mobile Security"
-                            description="Learn to test Android & iOS apps like a pro. Covers static/dynamic analysis, reverse engineering, and data storage attacks."
+                            description="Learn to test Android and iOS apps using real-world techniques. Cover static & dynamic analysis, reverse engineering, and mobile data security."
                             link="/services/mobile-security"
                         />
                         <ServiceCard
                             icon={FiCloud}
                             title="Cloud Security"
-                            description="Understand shared responsibility, misconfigurations, and privilege escalation across AWS, Azure, and GCP with hands-on labs."
+                            description="Understand AWS, Azure, and GCP security risks. Learn to identify misconfigurations, privilege escalation, and cloud-based attack paths."
                             link="/services/cloud-security"
                         />
                         <ServiceCard
                             icon={FiUserCheck}
                             title="Identity & Access Management"
-                            description="Master SSO, RBAC, SAML, OAuth2, and IAM policy attacks. Learn how breaches happen due to broken flows and how to fix them."
+                            description="Master authentication and access control systems like SSO, RBAC, OAuth2, and SAML. Learn how identity-based attacks happen and how to prevent them."
                             link="/services/iam"
                         />
                         <ServiceCard
                             icon={FiTarget}
                             title="Career Prep + CTFs"
-                            description="Resume building, interview Q&A, and weekend CTF challenges to sharpen real-world skills."
+                            description="Prepare for real cybersecurity roles with resume building, mock interviews, and hands-on CTF challenges designed to sharpen your practical skills."
                             link="/services/career-prep"
+                            ctaText="Get Started"
                         />
                     </div>
                 </LayoutContainer>
             </section>
 
             <CTA />
-        </div >
+        </div>
     );
 };
 

@@ -17,12 +17,12 @@ const CTA = () => {
                             Ready to <span className="text-gradient">Start Your Career</span> in Cybersecurity?
                         </h2>
                         <p className="text-base sm:text-lg text-slate-300">
-                            Build real cybersecurity skills through practical training, expert mentorship, and industry-focused programs.
+                            Learn ethical hacking, penetration testing, and cybersecurity through hands-on labs, real-world projects, and expert mentorship — designed to help you confidently land your first role.
                         </p>
                     </div>
                     <div className="flex-shrink-0 relative z-10 w-full sm:w-auto">
                         <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto bg-accent-blue hover:bg-[#0E6B3A] text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all shadow-[0_0_20px_rgba(57,255,136,0.3)] hover:shadow-[0_0_30px_rgba(57,255,136,0.5)] group">
-                            Get Started
+                            Start Training
                             <FiArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
-export const ServiceCard = ({ icon: Icon, title, description, link }) => (
+export const ServiceCard = ({ icon: Icon, title, description, link, ctaText = "Explore Program" }) => (
     <Link to={link || "/services/details"} className="group p-5 sm:p-7 md:p-8 rounded-2xl bg-[#0a111a]/60 backdrop-blur-xl border border-cyber-700/50 hover:border-accent-cyan/50 transition-all duration-500 box-glow-hover flex flex-col h-full lg:hover:-translate-y-2 relative overflow-hidden active:scale-[0.98]">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent-blue via-accent-cyan to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out z-0"></div>
         <div className="absolute inset-0 bg-accent-blue/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
@@ -13,7 +13,7 @@ export const ServiceCard = ({ icon: Icon, title, description, link }) => (
         <h3 className="relative z-10 text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-accent-cyan transition-colors">{title}</h3>
         <p className="relative z-10 text-slate-400 mb-6 leading-relaxed flex-grow group-hover:text-slate-300 transition-colors text-xs sm:text-sm md:text-base">{description}</p>
         <span className="relative z-10 inline-flex items-center text-accent-cyan font-semibold group-hover:text-white transition-colors mt-auto w-max text-sm sm:text-base">
-            Explore Program
+            {ctaText}
             <FiArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </span>
     </Link>

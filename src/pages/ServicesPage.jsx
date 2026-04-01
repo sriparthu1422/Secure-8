@@ -7,113 +7,115 @@ import { FiShield, FiCrosshair, FiDatabase, FiCloud, FiUserCheck, FiTarget, FiSm
 
 const ServicesPage = () => {
     return (
-        <div>
+        <div className="flex flex-col w-full overflow-x-hidden">
             {/* Hero Section */}
-            <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden flex flex-col items-center justify-center text-center">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] min-h-[800px] w-full bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
-                <LayoutContainer className="relative z-10 text-center flex flex-col items-center justify-center">
+            <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24 lg:pt-32 lg:pb-40 bg-cyber-950 border-b border-cyber-800 overflow-hidden">
+                {/* Decorative background blur - adjusted to be responsive and avoid overflow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl aspect-square bg-accent-blue/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+                
+                <LayoutContainer className="relative z-10 text-center">
                     <SectionTitle
-                        title="Comprehensive Cybersecurity Services"
-                        subtitle="We provide a wide range of Services"
+                        title="Comprehensive Cybersecurity Training Programs"
+                        subtitle="Explore Our Cybersecurity Programs"
                         center
                     />
-                    <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                        At Secure8, we provide expert-driven services across VAPT, cloud, IAM, and user awareness — helping you stay secure, compliant, and resilient. Explore our specialized cybersecurity and IAM services designed to meet your unique needs.
+                    <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
+                        At Secure8 Technology Services, we offer industry-focused cybersecurity programs designed to help you build real-world skills. From Ethical Hacking and Penetration Testing to Cloud Security and IAM, our training combines hands-on labs, expert mentorship, and practical learning — so you’re not just learning, but becoming job-ready.
                     </p>
                 </LayoutContainer>
             </section>
 
             {/* Services Grid Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-b border-cyber-800">
+            <section className="py-12 sm:py-20 lg:py-28 bg-cyber-900 border-b border-cyber-800 relative">
                 <LayoutContainer>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                        <ServiceCard 
-                            icon={FiShield} 
-                            title="Information Security" 
-                            description="We protect your digital assets through strategic infosec programs, risk assessments, and compliance-driven security controls." 
-                            link="/contact" 
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+                        <ServiceCard
+                            icon={FiShield}
+                            title="Information Security"
+                            description="Learn how organizations protect systems, networks, and data. Build a strong foundation in security principles, risk management, and compliance practices."
+                            link="/contact"
                         />
-                        <ServiceCard 
-                            icon={FiCrosshair} 
-                            title="Penetration Testing" 
-                            description="Find weaknesses before hackers do. We simulate real-world cyberattacks on your web and mobile applications to uncover vulnerabilities." 
-                            link="/contact" 
+                        <ServiceCard
+                            icon={FiCrosshair}
+                            title="Penetration Testing"
+                            description="Learn how to identify and exploit vulnerabilities in real-world environments. Master the full VAPT lifecycle using tools like Nmap, Burp Suite, and SQLMap."
+                            link="/contact"
                         />
-                        <ServiceCard 
-                            icon={FiDatabase} 
-                            title="API Security Testing" 
-                            description="Secure the connections that power your app. We test APIs for hidden flaws like IDOR, broken authentication, and injection risks." 
-                            link="/contact" 
+                        <ServiceCard
+                            icon={FiDatabase}
+                            title="API Security Testing"
+                            description="Understand how APIs are attacked and secured. Learn to test vulnerabilities like broken authentication, IDOR, and injection flaws."
+                            link="/contact"
                         />
-                        <ServiceCard 
-                            icon={FiCloud} 
-                            title="Cloud Security" 
-                            description="Protect your AWS, Azure, or GCP environments. We identify misconfigurations, access issues, and other cloud-specific risks." 
-                            link="/contact" 
+                        <ServiceCard
+                            icon={FiCloud}
+                            title="Cloud Security"
+                            description="Learn how to secure AWS, Azure, and cloud-based applications. Identify misconfigurations, access risks, and real-world cloud vulnerabilities."
+                            link="/contact"
                         />
-                        <ServiceCard 
-                            icon={FiUserCheck} 
-                            title="Identity & Access Management" 
-                            description="Control who has access to what. We help design and secure IAM systems so only the right people access the right resources." 
-                            link="/contact" 
+                        <ServiceCard
+                            icon={FiUserCheck}
+                            title="Identity & Access Management (IAM)"
+                            description="Learn how organizations manage user identities and access. Get hands-on experience with tools like Okta and SailPoint."
+                            link="/contact"
                         />
-                        <ServiceCard 
-                            icon={FiTarget} 
-                            title="Security Awareness & Managed Services" 
-                            description="Build a security-first culture. From team training to 24/7 managed security support, we help you strengthen internal defenses." 
-                            link="/contact" 
+                        <ServiceCard
+                            icon={FiTarget}
+                            title="Security Awareness & Career Support"
+                            description="Get resume building, mock interviews, and placement guidance to help you confidently start your cybersecurity career."
+                            link="/contact"
                         />
-                        <ServiceCard 
-                            icon={FiSmartphone} 
-                            title="Mobile Application Security" 
-                            description="Protect your Android and iOS apps from cyber threats. We uncover vulnerabilities and insecure data handling to ensure trust." 
-                            link="/contact" 
+                        <ServiceCard
+                            icon={FiSmartphone}
+                            title="Application Security (Web & Mobile)"
+                            description="Learn how to identify vulnerabilities in web and mobile applications, including XSS, CSRF, and insecure data handling."
+                            link="/contact"
                         />
                     </div>
                 </LayoutContainer>
             </section>
 
             {/* Our Customers Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-950 border-b border-cyber-800 relative overflow-hidden">
+            <section className="py-12 sm:py-20 lg:py-28 bg-cyber-950 border-b border-cyber-800 relative overflow-hidden">
                 {/* Decorative background blur */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] min-h-[300px] w-full bg-accent-cyan/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
-                
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl aspect-video bg-accent-cyan/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
                 <LayoutContainer className="relative z-10 text-center">
-                    <SectionTitle 
-                        title="Trusted by Organizations" 
-                        subtitle="Our Customers" 
-                        center 
+                    <SectionTitle
+                        title="Trusted by Organizations"
+                        subtitle="Our Customers"
+                        center
                     />
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-16">
+                    <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 sm:mb-16 px-4">
                         We are trusted by companies and professionals who rely on our cybersecurity training and expertise.
                     </p>
 
                     {/* Logos Grid */}
-                    <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 md:gap-12 lg:gap-16 opacity-70">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-center justify-center gap-8 sm:gap-10 lg:gap-12 opacity-60">
                         {/* Logo 1 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
-                            <FiBox className="w-8 h-8 group-hover:text-accent-cyan transition-colors" />
-                            <span className="text-xl font-bold tracking-wider font-mono">ACME INC</span>
+                        <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer group">
+                            <FiBox className="w-6 h-6 sm:w-8 sm:h-8 group-hover:text-accent-cyan transition-colors" />
+                            <span className="text-base sm:text-xl font-bold tracking-wider font-mono">ACME INC</span>
                         </div>
                         {/* Logo 2 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
-                            <FiHexagon className="w-8 h-8 group-hover:text-accent-blue transition-colors" />
-                            <span className="text-xl font-bold tracking-wider font-mono">NEXUS</span>
+                        <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer group">
+                            <FiHexagon className="w-6 h-6 sm:w-8 sm:h-8 group-hover:text-accent-blue transition-colors" />
+                            <span className="text-base sm:text-xl font-bold tracking-wider font-mono">NEXUS</span>
                         </div>
                         {/* Logo 3 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
-                            <FiGlobe className="w-8 h-8 group-hover:text-accent-cyan transition-colors" />
-                            <span className="text-xl font-bold tracking-wider font-mono">GLOBAL</span>
+                        <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer group">
+                            <FiGlobe className="w-6 h-6 sm:w-8 sm:h-8 group-hover:text-accent-cyan transition-colors" />
+                            <span className="text-base sm:text-xl font-bold tracking-wider font-mono">GLOBAL</span>
                         </div>
                         {/* Logo 4 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
-                            <FiCpu className="w-8 h-8 group-hover:text-accent-blue transition-colors" />
-                            <span className="text-xl font-bold tracking-wider font-mono">SYNAPSE</span>
+                        <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer group">
+                            <FiCpu className="w-6 h-6 sm:w-8 sm:h-8 group-hover:text-accent-blue transition-colors" />
+                            <span className="text-base sm:text-xl font-bold tracking-wider font-mono">SYNAPSE</span>
                         </div>
                         {/* Logo 5 */}
-                        <div className="flex items-center space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer group text-sm sm:text-base lg:text-lg">
-                            <FiTriangle className="w-8 h-8 group-hover:text-accent-cyan transition-colors" />
-                            <span className="text-xl font-bold tracking-wider font-mono">APEX</span>
+                        <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-slate-400 hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer group md:col-span-3 lg:col-span-1">
+                            <FiTriangle className="w-6 h-6 sm:w-8 sm:h-8 group-hover:text-accent-cyan transition-colors" />
+                            <span className="text-base sm:text-xl font-bold tracking-wider font-mono">APEX</span>
                         </div>
                     </div>
                 </LayoutContainer>
