@@ -33,14 +33,14 @@ const TestimonialSlider = () => {
     ];
 
     return (
-        <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 relative overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-24 bg-cyber-900 relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <SectionTitle title="Hear From Our Alumni" subtitle="Student Reviews" center />
 
-                <div className="max-w-4xl mx-auto mt-12">
+                <div className="max-w-4xl mx-auto mt-10 md:mt-12 lg:mt-16">
                     <Swiper
                         modules={[Pagination, Autoplay, Navigation]}
                         spaceBetween={30}
@@ -48,34 +48,37 @@ const TestimonialSlider = () => {
                         loop={true}
                         grabCursor={true}
                         autoHeight={true}
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        autoplay={{ delay: 4000, disableOnInteraction: false }}
                         pagination={{ clickable: true }}
                         navigation={true}
-                        className="pb-16 testimonial-swiper !px-4 md:!px-12"
+                        className="pb-16 testimonial-swiper !px-2 sm:!px-4 md:!px-12"
                     >
                         {testimonials.map((test, index) => (
                             <SwiperSlide key={index}>
-                                <div className="bg-cyber-900/40 backdrop-blur-xl border border-cyber-700/50 p-6 sm:p-8 md:p-12 lg:p-16 rounded-3xl relative h-full flex flex-col items-center box-glow-hover transition-shadow duration-500">
-                                    <FaQuoteLeft className="absolute top-6 left-6 md:top-8 md:left-8 w-8 h-8 md:w-12 md:h-12 text-cyber-700/50" />
+                                <div className="bg-cyber-900/40 backdrop-blur-xl border border-cyber-700/50 p-5 sm:p-8 md:p-12 lg:p-16 rounded-3xl relative h-full flex flex-col items-center box-glow-hover transition-shadow duration-500">
+                                    <FaQuoteLeft className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-cyber-700/30" />
 
                                     <div className="flex text-yellow-500 mb-6 justify-center">
                                         {[...Array(5)].map((_, i) => (
-                                            <FiStar key={i} className="w-5 h-5 fill-current mx-1 drop-shadow-[0_0_5px_rgba(234,179,8,0.5)]" />
+                                            <FiStar key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-current mx-0.5 sm:mx-1 drop-shadow-[0_0_5px_rgba(234,179,8,0.5)]" />
                                         ))}
                                     </div>
 
-                                    <p className="text-lg md:text-xl lg:text-2xl text-slate-300 italic mb-8 text-center leading-relaxed relative z-10 font-light max-w-2xl">
+                                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 italic mb-6 sm:mb-8 text-center leading-relaxed relative z-10 font-light max-w-2xl px-2">
                                         "{test.quote}"
                                     </p>
 
-                                    <div className="flex flex-col items-center mt-8">
-                                        <img
-                                            src={test.image}
-                                            alt={test.name}
-                                            className="w-16 h-16 rounded-full border-2 border-accent-cyan p-0.5 object-cover mb-4 shadow-[0_0_20px_rgba(57,255,136,0.5)]"
-                                        />
-                                        <h4 className="font-bold text-white text-lg">{test.name}</h4>
-                                        <p className="text-sm text-accent-cyan tracking-wide font-medium">{test.role}</p>
+                                    <div className="flex flex-col items-center mt-4 sm:mt-8">
+                                        <div className="relative mb-4">
+                                            <div className="absolute inset-0 bg-accent-cyan/20 blur-lg rounded-full"></div>
+                                            <img
+                                                src={test.image}
+                                                alt={test.name}
+                                                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-accent-cyan p-0.5 object-cover relative z-10 shadow-[0_0_20px_rgba(57,255,136,0.3)]"
+                                            />
+                                        </div>
+                                        <h4 className="font-bold text-white text-base sm:text-lg">{test.name}</h4>
+                                        <p className="text-xs sm:text-sm text-accent-cyan tracking-wide font-medium uppercase">{test.role}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>

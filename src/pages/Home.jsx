@@ -11,23 +11,23 @@ import { FiTarget, FiLock, FiAlertTriangle, FiWifi, FiCloud, FiDatabase, FiUserC
 
 const Home = () => {
     return (
-        <div>
+        <div className="flex flex-col w-full overflow-x-hidden">
             <Hero />
 
-            {/* Threat Prevention Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 border-t border-cyber-800">
+            {/* Career Growth Section */}
+            <section className="py-12 sm:py-20 lg:py-28 bg-cyber-900 border-t border-cyber-800 relative">
                 <LayoutContainer className="relative z-10">
                     <SectionTitle
-                        title="Accelerating Your Career with Cyber Training Build"
+                        title="Accelerated Career Growth"
                         subtitle="Real Cybersecurity Skills That Get You Hired"
                         mainTitle="Learn directly from industry experts, work on real-world labs, and gain the practical experience companies actually look for."
                         center
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mt-10 max-w-7xl mx-auto">
                         <FeatureCard
                             icon={FiBook}
                             title="Industry Experts"
-                            description="Learn from cybersecurity professionals actively working in penetration testing, SOC operations, and identity security not just trainers, but real practitioners."
+                            description="Learn from cybersecurity professionals actively working in penetration testing, SOC operations, and identity security — not just trainers, but real practitioners."
                         />
                         <FeatureCard
                             icon={FiMonitor}
@@ -57,70 +57,44 @@ const Home = () => {
                     </div>
                 </LayoutContainer>
             </section>
-            {/* <Stats /> */}
 
-            {/* Services Grid Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900 relative">
-                <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 -ml-40"></div>
+            {/* Training Programs Section */}
+            <section className="py-12 sm:py-20 lg:py-28 bg-cyber-950 relative border-t border-cyber-800/50">
+                <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 -ml-40 opacity-50"></div>
                 <LayoutContainer className="relative z-10">
                     <SectionTitle
-                        title="Comprehensive Cybersecurity Academies"
-                        subtitle="What We Offer"
+                        title="Comprehensive Training"
+                        subtitle="Choose Your Path in Cybersecurity"
+                        mainTitle="From foundational skills to advanced specialization, our programs are designed to help you learn, practice, and become job-ready."
                         center
                     />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10">
-                        <ServiceCard icon={FiHash} title="Information Security" description="We protect your digital assets through strategic infosec programs, risk assessments, and compliance-driven security controls." link="/services/network" />
-                        <ServiceCard icon={FaBug} title="Penetration Testing" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Find weaknesses before hackers do</strong>We simulate real-world cyberattacks on your web and mobile applications to uncover vulnerabilities—so you can fix them before they're exploited.</>} link="/services/cloud" />
-                        <ServiceCard icon={FiCode} title="API Security Testing" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Secure the connections that power your app</strong>Your APIs are the backbone of your product. We test them for hidden flaws like IDOR, broken authentication, and injection risks to protect your data.</>} link="/services/encryption" />
-                        <ServiceCard icon={FiCloud} title="Cloud Security" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Protect your AWS, Azure, or GCP environments</strong>We identify misconfigurations, access issues, and other cloud-specific risks to ensure your infrastructure stays secure and compliant.</>} link="/services/identity" />
-                        <ServiceCard icon={FaFingerprint} title="Identity & Access Management (IAM)" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Control who has access to what</strong>We help design and secure IAM systems so only the right people access the right resources—reducing insider risk and boosting compliance.</>} link="/services/monitoring" />
-                        <ServiceCard icon={FiBook} title="Security Awareness & Managed Services" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Build a security-first culture</strong>From team training to 24/7 managed security support, we help you strengthen internal defenses and meet industry standards like ISO 27001 and GDPR.</>} link="/services/backup" />
-                        <ServiceCard icon={FiSmartphone} title="Mobile Application Security" description={<><strong className="block mb-2 text-slate-300 text-sm sm:text-base lg:text-lg">Protect your Android and iOS apps from cyber threats</strong>We uncover vulnerabilities, insecure data handling, and broken authentication flows to ensure your mobile applications remain secure and trusted by users.</>} link="/services/mobile" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mt-10">
+                        <ServiceCard icon={FiHash} title="Information Security" description={<><strong className="block mb-2 text-slate-200">Build a strong security foundation.</strong>Learn how organizations protect systems, networks, and data using industry best practices.</>} link="/services/network" />
+                        <ServiceCard icon={FaBug} title="Penetration Testing" description={<><strong className="block mb-2 text-slate-200">Find vulnerabilities before attackers do.</strong>Understand the full VAPT lifecycle through real lab environments and live simulations.</>} link="/services/cloud" />
+                        <ServiceCard icon={FiCode} title="API Security Testing" description={<><strong className="block mb-2 text-slate-200">Secure modern interfaces.</strong>Detect flaws in machine-to-machine communications. Master IDOR, BOLA, and other top API risks.</>} link="/services/encryption" />
+                        <ServiceCard icon={FiCloud} title="Cloud Security" description={<><strong className="block mb-2 text-slate-200">Protect the modern stack.</strong>Secure AWS, Azure, and GCP environments from misconfigurations using practical training.</>} link="/services/identity" />
+                        <ServiceCard icon={FaFingerprint} title="Identity & Access (IAM)" description={<><strong className="block mb-2 text-slate-200">The first line of defense.</strong>Gain hands-on experience with tools like Okta and SailPoint while learning real enterprise use cases.</>} link="/services/monitoring" />
+                        <ServiceCard icon={FiBook} title="Career Accelerator" description={<><strong className="block mb-2 text-slate-200">Job-Ready Training.</strong>Resume building, mock interviews, and placement guidance to help you start your career.</>} link="/services/backup" />
+                        <ServiceCard icon={FiSmartphone} title="AppSec (Web & Mobile)" description={<><strong className="block mb-2 text-slate-200">Secure the experience.</strong>Learn to identify vulnerabilities like XSS and CSRF in web and mobile applications.</>} link="/services/mobile" />
                     </div>
                 </LayoutContainer>
             </section>
 
-            {/* Why Choose Us (Terminal UI) */}
+            {/* Interactive Experience Section */}
             <WhyChoose />
 
-            {/* Case Studies Preview */}
-            {/* <section className="py-12 sm:py-16 lg:py-20 bg-cyber-900">
-                <LayoutContainer>
-                    <SectionTitle
-                        title="Real-World Student Success Stories"
-                        subtitle="Alumni Success"
-                    />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-12">
-                        <CaseStudyCard
-                            image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-                            title="Security Engineer at a global technology company"
-                            description="From an IT helpdesk role to landing a highly coveted threat hunting position at a leading enterprise."
-                            category="Tech Placements"
-                        />
-                        <CaseStudyCard
-                            image="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80"
-                            title="Cloud Security Architect at a leading cloud provider"
-                            description="Transitioned into cloud security and tripled earning potential through our intensive network defense certification."
-                            category="Career Shift"
-                        />
-                        <CaseStudyCard
-                            image="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"
-                            title="SOC Analyst at a cybersecurity firm"
-                            description="Built an impressive portfolio of practical lab exercises and successfully secured a Blue Team role."
-                            category="Upskilling"
-                        />
-                    </div>
-                </LayoutContainer>
-            </section> */}
-
             <TestimonialSlider />
-            <CTA />
+            
+            <section className="bg-cyber-950">
+                <CTA />
+            </section>
 
-            {/* Blog Teasers */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-cyber-950 border-t border-cyber-800">
+            {/* Insights Section */}
+            <section className="py-12 sm:py-20 lg:py-28 bg-cyber-900 border-t border-cyber-800 relative overflow-hidden">
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-purple/5 blur-[120px] rounded-full pointer-events-none opacity-30"></div>
                 <LayoutContainer className="relative z-10">
-                    <SectionTitle title="Academy News & Educational Resources" subtitle="Latest Insights" center />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 max-w-7xl mx-auto">
+                    <SectionTitle title="Academy Insights" subtitle="Latest Educational Resources" center />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-10 max-w-7xl mx-auto">
                         <BlogCard
                             category="Career Advice"
                             title="How to Prepare for Your First Cybersecurity Interview"
@@ -145,7 +119,6 @@ const Home = () => {
                     </div>
                 </LayoutContainer>
             </section>
-
         </div>
     );
 };
