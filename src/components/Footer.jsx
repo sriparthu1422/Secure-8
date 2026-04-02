@@ -36,12 +36,12 @@ const Footer = () => {
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left order-2 lg:pl-4">
                         <h4 className="text-white font-bold text-base sm:text-lg mb-6 uppercase tracking-wider">Company</h4>
                         <ul className="space-y-4">
-                            {['About', 'Services', 'Academies', 'Contact'].map((link) => (
+                            {['About', 'Services', 'Academics', 'Contact'].map((link) => (
                                 <li key={link}>
                                     <Link
                                         to={
-                                            link === 'Academies' ? '/services' :
-                                                link === 'Services' ? '/our-services' :
+                                            link === 'Academics' ? '/academics' :
+                                                link === 'Services' ? '/services' :
                                                     `/${link.toLowerCase().replace(' ', '-')}`
                                         }
                                         className="hover:text-accent-blue transition-colors text-sm py-1 inline-block hover:pl-1 duration-200"
@@ -55,12 +55,19 @@ const Footer = () => {
 
                     {/* Core Programs */}
                     <div className="flex flex-col items-center sm:items-start text-center sm:text-left order-3 lg:pl-4">
-                        <h4 className="text-white font-bold text-base sm:text-lg mb-6 uppercase tracking-wider">Academies</h4>
+                        <h4 className="text-white font-bold text-base sm:text-lg mb-6 uppercase tracking-wider">Academics</h4>
                         <ul className="space-y-4">
-                            {['Ethical Hacking & VAPT', 'Cloud Security', 'Web Application Security', 'API Security', 'Identity & Access Management (IAM)', 'Career Prep & CTFs'].map((link) => (
-                                <li key={link}>
-                                    <Link to="/services" className="hover:text-accent-blue transition-colors text-sm py-1 inline-block hover:pl-1 duration-200">
-                                        {link}
+                            {[
+                                { name: 'VAPT Course', path: '/academics/vapt' },
+                                { name: 'Cloud Security', path: '/academics/cloud-security' },
+                                { name: 'Web Security', path: '/academics/web-pentesting' },
+                                { name: 'API Security', path: '/academics/api-security' },
+                                { name: 'Identity & Access (IAM)', path: '/academics/iam' },
+                                { name: 'Career Prep', path: '/academics/career-prep' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link to={item.path} className="hover:text-accent-blue transition-colors text-sm py-1 inline-block hover:pl-1 duration-200">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}

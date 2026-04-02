@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 import AppRouter from './router/AppRouter';
 import IntroAnimation from './components/IntroAnimation';
 
-// Helper component to handle the redirect inside the Router context
-function InitialRedirect() {
-  React.useEffect(() => {
-    // If the user lands on any path other than root, redirect them to root on first load
-    if (window.location.pathname !== '/') {
-      window.location.replace('/');
-    }
-  }, []);
+// Helper component to scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return null;
 }
 
@@ -29,13 +27,9 @@ function App() {
     <>
       {!introFinished && <IntroAnimation onComplete={() => setIntroFinished(true)} />}
       
-      {/* 
-        Keep BrowserRouter mounted but hidden so layout shift isn't jarring 
-        when the intro finishes.
-      */}
       <div className={introFinished ? 'opacity-100 transition-opacity duration-1000' : 'fixed inset-0 opacity-0 pointer-events-none z-[-1]'}>
         <BrowserRouter>
-          <InitialRedirect />
+          <ScrollToTop />
           <AppRouter />
         </BrowserRouter>
       </div>

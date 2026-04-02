@@ -1,28 +1,183 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import LayoutContainer from '../components/LayoutContainer';
 import SectionTitle from '../components/SectionTitle';
 import CTA from '../components/CTA';
-import { FiCheckCircle, FiShield, FiArrowRight } from 'react-icons/fi';
+import { FiCheckCircle, FiShield, FiArrowRight, FiSmartphone, FiDatabase, FiCloud, FiUserCheck, FiTarget } from 'react-icons/fi';
+
+const academyData = {
+    'web-pentesting': {
+        title: "Web Application Pentesting",
+        suffix: "Bootcamp",
+        subtitle: "Featured Academy",
+        heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        description: "Web Application Pentesting focuses on identifying vulnerabilities in web applications using real-world attack techniques. This course is ideal for learners who want to master OWASP Top 10 and web security testing.",
+        curriculum: "You will learn how attackers exploit web apps and how to prevent attacks using tools like Burp Suite. You will also understand real-world attack scenarios through hands-on labs.",
+        features: [
+            'OWASP Top 10 Vulnerabilities',
+            'SQL Injection, XSS, CSRF',
+            'Authentication & Session Management',
+            'Web Security Testing using Burp Suite'
+        ],
+        benefits: "Web Security Tester, Ethical Hacker, Bug Bounty Hunter",
+        icon: FiShield
+    },
+    'info-security': {
+        title: "Information Security",
+        suffix: "Management",
+        subtitle: "Core Program",
+        heroImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+        description: "Information Security focuses on protecting the confidentiality, integrity, and availability of organization data. This program covers the fundamentals of risk management and compliance.",
+        curriculum: "Explore security frameworks like ISO 27001, NIST, and SOC2. Learn to implement security controls, conduct risk assessments, and manage organizational security posture.",
+        features: [
+            'Security Frameworks (ISO 27001)',
+            'Risk Management Strategies',
+            'Compliance & Auditing',
+            'Security Policy Development'
+        ],
+        benefits: "Information Security Officer, Compliance Manager, Security Auditor",
+        icon: FiShield
+    },
+    'vapt': {
+        title: "Penetration Testing",
+        suffix: "VAPT",
+        subtitle: "Expert Track",
+        heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+        description: "Vulnerability Assessment and Penetration Testing (VAPT) is a systematic process of identifying and fixing security loopholes. Master the art of ethical hacking.",
+        curriculum: "Learn the methodology of network, web, and infrastructure pentesting. Master reconnaissance, scanning, exploitation, and post-exploitation techniques.",
+        features: [
+            'Network Pentesting',
+            'Infrastructure Assessment',
+            'Exploit Development Basics',
+            'Professional Reporting'
+        ],
+        benefits: "Penetration Tester, Security Researcher, VAPT Analyst",
+        icon: FiShield
+    },
+    'api-security': {
+        title: "API Security Testing",
+        suffix: "Bootcamp",
+        subtitle: "Advanced Program",
+        heroImage: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=1200&q=80",
+        description: "Master modern API attacks like Broken Authentication, BOLA, and Mass Assignment. Gain hands-on experience using tools like Postman and Burp Suite.",
+        curriculum: "Deep dive into RESTful and GraphQL API security. Learn to identify logic flaws and authorization issues that traditional scanners miss.",
+        features: [
+            'REST & GraphQL Security',
+            'BOLA & BIPA Vulnerabilities',
+            'JWT & OAuth2 Security',
+            'API Fuzzing & Manual Testing'
+        ],
+        benefits: "API Security Specialist, Backend Security Engineer",
+        icon: FiDatabase
+    },
+    'mobile-security': {
+        title: "Mobile Security",
+        suffix: "Bootcamp",
+        subtitle: "Certification Course",
+        heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+        description: "Learn to test Android and iOS apps using real-world techniques. Cover static & dynamic analysis, reverse engineering, and mobile data security.",
+        curriculum: "Explore the internal architecture of mobile operating systems and how to intercept traffic, bypass root detections, and analyze binary code.",
+        features: [
+            'Android & iOS Internals',
+            'Static & Dynamic Analysis',
+            'Reverse Engineering Apps',
+            'Mobile Traffic Interception'
+        ],
+        benefits: "Mobile App Pentester, Application Security Specialist",
+        icon: FiSmartphone
+    },
+    'cloud-security': {
+        title: "Cloud Security",
+        suffix: "Bootcamp",
+        subtitle: "Enterprise Program",
+        heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        description: "Understand AWS, Azure, and GCP security risks. Learn to identify misconfigurations, privilege escalation, and cloud-based attack paths.",
+        curriculum: "Master the shared responsibility model. Learn to secure containers, serverless functions, and complex cloud networking architectures.",
+        features: [
+            'AWS, Azure, & GCP Basics',
+            'IAM & Identity Security',
+            'Container & Kubernetes Security',
+            'Serverless Attack Surfaces'
+        ],
+        benefits: "Cloud Security Architect, DevSecOps Engineer",
+        icon: FiCloud
+    },
+    'iam': {
+        title: "Identity & Access Management",
+        suffix: "Bootcamp",
+        subtitle: "Professional Series",
+        heroImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+        description: "Master authentication and access control systems like SSO, RBAC, OAuth2, and SAML. Learn how identity-based attacks happen and how to prevent them.",
+        curriculum: "Learn to implement secure identity solutions for large scale organizations using industry-standard tools like Okta and SailPoint.",
+        features: [
+            'SSO & Multi-Factor Auth',
+            'OAuth2 & OpenID Connect',
+            'Privileged Access Management',
+            'Identity Governance'
+        ],
+        benefits: "IAM Engineer, Security Consultant",
+        icon: FiUserCheck
+    },
+    'career-prep': {
+        title: "Career Prep + CTFs",
+        suffix: "Program",
+        subtitle: "Career Accelerator",
+        heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+        description: "Prepare for real cybersecurity roles with resume building, mock interviews, and hands-on CTF challenges designed to sharpen your practical skills.",
+        curriculum: "Beyond technical skills, we help you master the interview process and showcase your skills through a professional security portfolio.",
+        features: [
+            'Resume Building & Review',
+            'Mock Technical Interviews',
+            'Guided CTF Challenges',
+            'Cybersecurity Jobs Roadmap'
+        ],
+        benefits: "Job-Ready Candidate, SOC Analyst, Security Consultant",
+        icon: FiTarget
+    }
+};
 
 const ServiceDetails = () => {
+    const { id } = useParams();
+    const data = academyData[id];
+    const basePath = window.location.pathname.startsWith('/services') ? '/services' : '/academics';
+
+    if (!data) {
+        return (
+            <div className="pt-32 pb-20 text-center">
+                <LayoutContainer>
+                    <h2 className="text-3xl text-white font-bold mb-6">Program Not Found</h2>
+                    <p className="text-slate-400 mb-8">The program you are looking for does not exist or has been moved.</p>
+                    <Link to={basePath} className="text-accent-cyan hover:underline flex items-center justify-center">
+                        <FiArrowRight className="mr-2 rotate-180" /> Back to {basePath === '/services' ? 'Services' : 'Academics'}
+                    </Link>
+                </LayoutContainer>
+            </div>
+        );
+    }
+
+    const Icon = data.icon;
+
     return (
         <div>
             {/* Hero */}
             <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-10"></div>
+                <div 
+                    className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-60"
+                    style={{ backgroundImage: `url(${data.heroImage})` }}
+                ></div>
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent to-cyber-950"></div>
 
                 <LayoutContainer className="relative z-10">
                     <div className="max-w-3xl">
                         <div className="flex items-center space-x-3 mb-6">
-                            <FiShield className="w-8 h-8 text-accent-cyan" />
-                            <span className="text-accent-cyan font-bold tracking-widest uppercase text-sm">Featured Academy</span>
+                            <Icon className="w-8 h-8 text-accent-cyan" />
+                            <span className="text-accent-cyan font-bold tracking-widest uppercase text-sm">{data.subtitle}</span>
                         </div>
                         <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                            Ethical Hacking <span className="text-gradient">Bootcamp</span>
+                            {data.title} <span className="text-gradient">{data.suffix || 'Bootcamp'}</span>
                         </h1>
                         <p className="text-xl text-slate-400 mb-10 leading-relaxed">
-                            Master offensive security with a comprehensive curriculum covering penetration testing, network defense, and vulnerability exploitation to launch your cyber career.
+                            {data.description}
                         </p>
                         <button className="bg-accent-blue hover:bg-[#0E6B3A] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(57, 255, 136,0.4)]">
                             Enroll in Academy
@@ -41,22 +196,12 @@ const ServiceDetails = () => {
                             <SectionTitle title="Comprehensive Curriculum" />
                             <div className="prose prose-invert prose-lg max-w-none prose-p:text-slate-300 prose-headings:text-white text-sm sm:text-base lg:text-lg">
                                 <p>
-                                    Modern cybersecurity requires a diverse skill set. The traditional concept of perimeter defense has evolved with the advent of remote work, cloud infrastructure, and sophisticated threat actors. To defend today's networks, you need practical, hands-on offensive and defensive understanding.
-                                </p>
-                                <p>
-                                    Our Ethical Hacking academy immerses you in real-world scenarios through hands-on labs. We don't just teach theory; we guide you in exploiting and securing real environments using industry-standard tools and practices.
+                                    {data.curriculum}
                                 </p>
 
                                 <h3 className="text-2xl font-bold mt-12 mb-6">Overview of Features</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-12 not-prose">
-                                    {[
-                                        'Advanced Penetration Testing',
-                                        'Network Traffic Analysis',
-                                        'Vulnerability Exploitation',
-                                        'Social Engineering Tactics',
-                                        'Active Directory Security',
-                                        'Incident Response Protocols'
-                                    ].map((feature, idx) => (
+                                    {data.features.map((feature, idx) => (
                                         <div key={idx} className="bg-cyber-800 border border-cyber-700 p-6 rounded-2xl flex items-start space-x-4">
                                             <FiCheckCircle className="w-6 h-6 text-accent-cyan flex-shrink-0 mt-0.5" />
                                             <span className="text-white font-medium">{feature}</span>
@@ -66,31 +211,23 @@ const ServiceDetails = () => {
 
                                 <h3 className="text-2xl font-bold mb-6">Career Benefits</h3>
                                 <p>
-                                    By mastering our Ethical Hacking curriculum, you immediately benefit from a higher chance of landing top cybersecurity roles. Our career team helps refine your credentials, ensuring that when you apply for a job, you represent a highly capable security professional.
-                                </p>
-                                <p>
-                                    Furthermore, our lab-based learning model is designed to simulate a real-world Security Operations Center (SOC) environment. You will collaborate using modern tools, threat intelligence feeds, and incident reporting formatting, ensuring you are ready for day one on the job.
+                                    {data.benefits}
                                 </p>
                             </div>
                         </div>
 
                         {/* Right Column (Sidebar / CTA) */}
                         <div className="lg:w-1/3 space-y-8">
-                            {/* <div className="bg-gradient-cyber p-8 rounded-3xl border border-cyber-700 relative overflow-hidden box-glow">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-blue/10 blur-[40px] rounded-full"></div>
-                                <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Start Your Free Trial Lab</h3>
-                                <p className="text-slate-400 mb-8 relative z-10 text-sm sm:text-base lg:text-lg">Our instructors will guide you through your first interactive security lab and outline your career map.</p>
-                                <button className="w-full bg-accent-blue hover:bg-[#0E6B3A] text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center relative z-10">
-                                    Start Trial Now <FiArrowRight className="ml-2" />
-                                </button>
-                            </div> */}
-
                             <div className="bg-cyber-800 p-8 rounded-3xl border border-cyber-700">
-                                <h3 className="text-xl font-bold text-white mb-6">Related Academies</h3>
+                                <h3 className="text-xl font-bold text-white mb-6">Related Programs</h3>
                                 <ul className="space-y-4">
-                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg"><FiArrowRight className="mr-3 text-accent-cyan" /> Cloud Security Architecture</a></li>
-                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg"><FiArrowRight className="mr-3 text-accent-cyan" /> Incident Response Masterclass</a></li>
-                                    <li><a href="#" className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg"><FiArrowRight className="mr-3 text-accent-cyan" /> Threat Intel Fundamentals</a></li>
+                                    {Object.keys(academyData).filter(key => key !== id).slice(0, 3).map(key => (
+                                        <li key={key}>
+                                            <Link to={`${basePath}/${key}`} className="flex items-center text-slate-300 hover:text-accent-blue transition-colors text-sm sm:text-base lg:text-lg">
+                                                <FiArrowRight className="mr-3 text-accent-cyan" /> {academyData[key].title}
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
