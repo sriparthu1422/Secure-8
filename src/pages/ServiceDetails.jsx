@@ -162,10 +162,10 @@ const ServiceDetails = () => {
             {/* Hero */}
             <section className="py-12 sm:py-16 lg:py-24 bg-cyber-950 relative border-b border-cyber-800 overflow-hidden">
                 <div 
-                    className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center opacity-60"
+                    className="absolute inset-0 lg:left-auto lg:right-0 lg:w-1/2 h-full bg-cover bg-center opacity-30 lg:opacity-60"
                     style={{ backgroundImage: `url(${data.heroImage})` }}
                 ></div>
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent to-cyber-950"></div>
+                <div className="absolute inset-0 lg:left-auto lg:right-0 lg:w-1/2 h-full bg-gradient-to-t lg:bg-gradient-to-l from-cyber-950 via-cyber-950/50 to-transparent"></div>
 
                 <LayoutContainer className="relative z-10">
                     <div className="max-w-3xl">

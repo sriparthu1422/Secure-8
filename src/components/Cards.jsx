@@ -36,6 +36,7 @@ export const CaseStudyCard = ({ image, title, description, category, link }) => 
         <img
             src={image || "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"}
             alt={title}
+            loading="lazy"
             className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-40 group-hover:opacity-60"
         />
         <div className="relative z-20 p-5 sm:p-8 transform translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
@@ -57,7 +58,7 @@ export const BlogCard = ({ category, title, author, date, image, link }) => (
     <article className="bg-cyber-800 rounded-2xl overflow-hidden border border-cyber-700 hover:border-accent-purple transition-all duration-300 group flex flex-col h-full lg:hover:-translate-y-1 active:scale-[0.98] cursor-pointer">
         <div className="relative h-40 sm:h-48 overflow-hidden">
             <div className="absolute inset-0 bg-cyber-900/40 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
-            <img src={image || "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src={image || "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"} alt={title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20">
                 <span className="bg-accent-purple text-white text-[10px] sm:text-xs font-bold px-2 py-1 sm:px-3 sm:py-1 rounded-full shadow-lg">
                     {category}
